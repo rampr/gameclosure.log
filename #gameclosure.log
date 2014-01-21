@@ -174,12 +174,8 @@
 04:39 < rampr> yay!
 04:47 < rampr> why do the the .so files have to hex edited ?
 15:52 -!- Netsplit *.net <-> *.split quits: catid, ronan1, chapel
-15:53 -!- lepahc is now known as chapel
 16:00 -!- Netsplit over, joins: ronan1
-18:39 -!- boneskul_ is now known as boneskull
 19:18 < catid_> good morning
-19:18 -!- catid_ is now known as cat_
-19:18 -!- cat_ is now known as catid
 19:21 < catid> still fixing some issues for 2.2 support
 19:21 < catid> some of them are my fault actually ^_^
 --- Day changed Wed Nov 20 2013
@@ -347,7 +343,6 @@
 05:26 < bhldev> what happened to admob
 05:57 < bhldev> where did you guys get this astar algorithm for the prebuilt spritesheet example... too bad it's GPL so I'll have to find another astar
 14:44 -!- Netsplit *.net <-> *.split quits: Godefroy
-14:44 -!- Godefroy_ is now known as Godefroy
 --- Day changed Thu Dec 05 2013
 09:13 < debarko> catid, u there?
 09:14 < debarko> how can i get hold of the view controller in ios plugin
@@ -398,7 +393,6 @@
 12:27 < debarko> lol, it's not unexpected ... pretty sure a lot of people might have interest in that
 12:39 < catid> just found a way to squeeze out 5-7% more performance with clang vector extensions whee
 12:40 < catid> just a few more things to do before it's done..
-21:25 -!- ReidE96 is now known as Euan
 --- Day changed Sat Dec 07 2013
 00:22 < jaayden> Hi I have a question about the current state of TextEditView and TextPromptView
 00:23 < jaayden> Does anyone here have any knowledge of the fix that is in the works for those Views?
@@ -452,11 +446,9 @@
 00:58 < bhldev> rampr so even though gc uses a webkit or gecko engine in the back it wouldn't expose the indexeddb parts of it?
 00:58 < bhldev> that's unfortunate
 02:33 < Athos> help
-02:33 -!- Athos is now known as Guest66327
 02:33 < Guest66327> hello
 02:33 < Guest66327> does anybody know how ot remove a drag listener?
 03:13 < bhldev> Guest66327 normal way doesn't work? unsubscribe?
-04:38 -!- mfen_ is now known as MFen_
 --- Log closed Sun Dec 08 22:48:37 2013
 --- Log opened Sun Dec 08 23:11:33 2013
 --- Log closed Mon Dec 09 00:03:17 2013
@@ -601,7 +593,6 @@
 05:55 < catid> ah nice
 06:04 < catid> lol http://www.theatlantic.com/technology/archive/2013/12/the-new-armor-that-lets-you-sense-surveillance-cameras/282335/
 09:44 -!- mode/#gameclosure [+v mcav_] by ChanServ
-09:44 -!- mcav_ is now known as mcav
 --- Log closed Sat Dec 14 13:30:42 2013
 --- Log opened Sat Dec 14 13:36:12 2013
 13:36 !rajaniemi.freenode.net [freenode-info] if you're at a conference and other people are having trouble connecting, please mention it to staff: http://freenode.net/faq.shtml#gettinghelp
@@ -742,12 +733,10 @@
 22:53 < joshthecoder> okay thanks
 --- Day changed Fri Jan 03 2014
 04:56 < bhldev> so any news?
-13:51 -!- Guest83970 is now known as Birdbones
 15:30 < bhldev_> nothing new for the new year?
 18:38 < catid> bhldev_:  i think our plan is to prioritize stability
 18:38 < catid> all of our efforts right now are going into developing products
 18:39 < catid> and bug fixes will get tossed back into the public domain periodically
-18:39 -!- j15h is now known as jishnu
 18:39 < jishnu> catid, any chance of supporting windows phone any time soon ?
 18:40 < catid> the most recent figures place it at 2.5% of the global market
 18:40 < joshthecoder> BB10 :)
@@ -963,7 +952,6 @@
 14:29 -!- Netsplit *.net <-> *.split quits: @ChanServ
 14:29 -!- Netsplit over, joins: @ChanServ
 20:28 < athos> hey, can anybody tell me how i can prevent my application from entering sleep mode within this framework>?
-20:28 -!- athos is now known as Guest71418
 20:43 < bhldev> there's a setting
 20:43 < bhldev> maybe manifest.json
 20:55 < Guest71418> ivlookedi n teh documentaqtion and i couldnt find anything, i know in native ios you can use, "[UIApplication sharedApplication].idleTimerDisabled = YES;" is there anyway i can put that into manifest.json?
@@ -986,7 +974,6 @@
 20:36 -!- Netsplit *.net <-> *.split quits: oodavid
 20:38 -!- Netsplit over, joins: oodavid
 --- Day changed Mon Jan 06 2014
-01:19 -!- Euan_ is now known as Euan
 --- Log closed Mon Jan 06 10:25:57 2014
 --- Log opened Mon Jan 06 11:01:54 2014
 --- Log closed Mon Jan 06 11:09:03 2014
@@ -994,7 +981,6 @@
 --- Log closed Mon Jan 06 11:45:19 2014
 --- Log opened Mon Jan 06 11:45:37 2014
 19:27 < catid_> Guest83970: if you're the same person who was asking,
-19:27 -!- catid_ is now known as catid
 19:27 < catid> one of our games used accelerometer for input so no touch input
 19:27 < catid> meaning the game could appear idle to android
 19:27 < catid> or ios
@@ -1009,7 +995,6 @@
 19:56 < catid> will be in the next release of the documentation
 --- Day changed Tue Jan 07 2014
 00:02 -!- Netsplit *.net <-> *.split quits: boneskull
-00:06 -!- oodavid is now known as 7CBAANVBP
 00:42 < csantovsky> hey guys, are there any closure workers here?
 00:44 < catid> hello
 00:44 < catid> csantovsky: i may be able to help
@@ -1050,7 +1035,6 @@
 01:06 < catid> heh
 --- Log closed Wed Jan 08 04:45:56 2014
 --- Log opened Wed Jan 08 04:46:13 2014
-07:06 -!- Guest83970 is now known as Birdbones
 14:40 -!- Netsplit *.net <-> *.split quits: oodavid
 14:43 -!- Netsplit over, joins: oodavid
 22:36 < oodavid> I get a lot of [warn] messages when using basil; various messages and warnings - running  on Ubuntu 13.10, the simulator works OK but am attempting to install android-native in order to test
@@ -1367,8 +1351,6 @@
 17:16 < PierrickB> catid: is there a public roadmap for gc ? :)
 19:05 < catid> good morning
 19:07 < catid> currently we're spending all of our time working on a product and some companies are interested in using it; any and all of the software improvements to the devkit will continue to be released
-23:17 -!- Godefroy_ is now known as Godefroy
-23:18 -!- tomh-_ is now known as tomh-
 --- Day changed Thu Jan 16 2014
 --- Log closed Thu Jan 16 06:57:15 2014
 --- Log opened Thu Jan 16 09:12:35 2014
@@ -1528,3 +1510,113 @@
 12:00 < scull> Hi everyone ! I'm trying to make my own android ad plugin to use admob in my games. But, I don't know how implement it : on admob sdk documentation, it said to include this java code : "setContentView(R.layout.main); LinearLayout layout = (LinearLayout)findViewById(R.id.mainLayout);layout.addView(adView);" But it doesn't works. I don't know  how to get the mainView ans the mainLayout. Have you got any idea ?
 13:00 < scull> I've tried to follow this tutorial (AdMob on OpenGL ES), it's compile, but it doesn't works (the game is running, but no ads are display) : http://devblog.corpwar.net/2011/12/admob-with-opengl-es.html
 13:07 < scull> anybody can help me ?
+--- Log opened Fri Jan 17 17:00:17 2014
+17:00 -!- Irssi: #gameclosure: Total of 19 nicks [1 ops, 0 halfops, 0 voices, 18 normal]
+17:00 -!- Irssi: Join to #gameclosure was synced in 1 secs
+21:20 < catid> good afternoon
+--- Log closed Sat Jan 18 02:05:02 2014
+--- Log opened Sat Jan 18 03:07:41 2014
+03:07 -!- Irssi: #gameclosure: Total of 18 nicks [1 ops, 0 halfops, 0 voices, 17 normal]
+03:07 -!- Irssi: Join to #gameclosure was synced in 8 secs
+09:36 < rampr> catid: what is texture __canvas__1 ?
+09:37 < rampr> we don't have that in our spritesheets
+--- Day changed Sun Jan 19 2014
+01:26 < PierrickB> Hey catid ! A quick question ; is there any way to get rid of GC cache ? We often have problems with 404 errors for assets which actually exists.
+01:26 < PierrickB> exist*
+11:58 < oodavid> is there a way to iterate over the "active" views in a viewPool?
+11:59 < oodavid> Or even all the views for that matter, I can check the visibility
+12:15 < oodavid> I see in timestep/ui/ViewPool.js I could access the internal property _views - I imagine using this will cause issues when compiled?
+12:17 < oodavid> ...although... the adventuremap example accesses _views - I think I have a winner!
+12:17 < oodavid> apologies for dumping :-)
+16:29 < bhldev> I'm thinking of dumping half a year into opengl 2 catid what do you think
+16:30 < bhldev> I can't really justify it, doesn't make sense with money and other options, only reason is if I don't learn programmable pipeline I'll feel like a faker lol
+16:37 < bhldev> yeah just confirmed must know programmable pipeline to do graphics
+16:37 < bhldev> what a bummer
+17:37 < oodavid> bhldev, are you a gameclosure developer?
+20:20 < bhldev> oodavid no
+--- Day changed Mon Jan 20 2014
+17:30 < Godefroy> hi!
+17:31 < Godefroy> do you know if GC handles circular dependencies correctly?
+17:31 < Godefroy> I think I have an issue with that
+18:05 < catid> good morning
+18:05 < catid> we've iterated on that problem a couple times
+18:05 < catid> it shows up again every now and then
+18:05 < catid> so there's a chance something is still not ideal
+18:06 < catid> i'm reasonably sure right now that normal View objects get garbage collected properly
+18:06 < catid> but, it is easy to keep references to them by accident
+18:06 < catid> the best way to deal with it, if you can, is to use view pools so you don't depend on GC
+18:07 < catid> GC is a source of random latency anyway
+18:07 < catid> so minimizing that is best
+18:36 < oodavid> howdy all!
+18:37 < catid> g'morning
+18:45 < oodavid> Just popping on to say I had a most pleasurable weekend working with devkit
+18:45 < oodavid> and to offer my thanks :-)
+18:45 < catid> great!
+18:45 < catid> i had a very good weekend *not* working on the devkit
+18:46 < oodavid> pip pip!
+18:46 < catid> looks like the QR code stuff is almost ready for release
+18:46 < oodavid> the zxing addon?
+18:46 < catid> dropped zxing - a friend pointed me at quirc, which is a lot faster and easier to integrate
+18:47 < catid> the quirc developer responds via Email too
+18:47 < oodavid> Never thought about it, I guess zxing has been around for a digital age
+18:47 < oodavid> I'll look into quirc though, always useful
+18:48 < catid> it may have some kind of limitation like only ASCII text etc
+18:48 < catid> but i just want to encode short generated URLs so that works fine
+18:49 < oodavid> code looks pretty tight
+18:50 < oodavid> so is a lot of the work that goes into "integration" actually writing js emulators and documentation?
+18:53 < catid> hm well for example, to get QR in I had to design how that will work first off
+18:53 < catid> what JS API functions are needed, where to put them
+18:54 < catid> what parameters are needed for a real application etc
+18:54 < catid> then the implementation involved copying some old code I had lying around that does conversion to/from Base64
+18:54 < catid> starting with zxing, ripping that out and going with quirc
+18:55 < catid> had zxing working on iOS, then tried to get it working on Android and found it was a bear
+18:55 < catid> writing a demo app that uses the feature so i can demo it at the company meetings
+18:56 < catid> testing it under various conditions to see how large the QR code needs to be on the screen and what level of error correction coding to use
+18:56 < oodavid> a lot of due diligence then!
+18:57 < oodavid> do you have a lot of show and tell at company meetings?
+18:57 < catid> i like to demo something every other week
+18:57 < oodavid> always interested to know how companies like GC operate
+18:57 < oodavid> ^that's an awesome way to keep momentum up
+18:57 < catid> well last Friday it was all about my teammate and the CEO giving presentations on where we are going in the next few months
+18:58 < catid> which was exciting to see
+18:58 < catid> the week before that it was technical demos
+18:59 < oodavid> sounds stimulating :-)
+19:00 < oodavid> I am curious where you are headed, a while back you said you're working on a product full-time; am I right in assuming you also produce games anonymously for other companies?
+19:00 < oodavid> there's a lot of mystique surrounding GC :D
+19:02 < catid> sorry definitely can't talk about that stuff, but we will have something big to announce soon! :)
+19:02 < oodavid> I've been reading too many detective novels :-)
+19:03 < oodavid> But glad to hear!
+19:03 < catid> i think the announcement happens either this week or next?
+19:03 < oodavid> Ooooooh
+19:04 < oodavid> I want GC merch
+19:05 < catid> live in the SF bay area?
+19:05 < oodavid> Other side of the pond I'm afraid
+19:05 < oodavid> hence all the British'isms
+19:05 -!- boneskul_ is now known as boneskull
+19:06 < oodavid> Although I'm trying to persuade my boss to send me on a US roadtrip for "essential conferences"
+19:06 < catid> hrm, if you release a game on the devkit i'd certainly mail you something for contributing to the project.  seems fair
+19:07 < oodavid> I'll hold you to that!
+19:09 < oodavid> Don't suppose you know if my "animation" contributions will get pulled into devkit / timestep?
+19:12 < oodavid> err, native-core and timestep rather
+19:12 < oodavid> https://github.com/gameclosure/native-core/pull/2
+19:13 < catid> lemme check
+19:13 < catid> ah good
+19:13 < catid> just inspecting to make sure the original functionality is still intact
+19:15 < oodavid> I've a feeling there's more references to animation in other repos but not quite sure where to start, but happy to update the documentation
+19:17 < catid> the existing stuff lgtm
+19:17 < catid> will pull it in now
+19:20 < oodavid> what a gent
+19:24 < oodavid> Right then, I'm off to cook
+19:24 < catid> later
+19:24 < oodavid> might pop on tomorrow
+19:24 < oodavid> good luck with that animation lark, don't sweat it if you want me to refactor etc.
+21:46 < Athos> hello
+21:46 -!- Athos is now known as Guest57640
+21:48 < Guest57640> Can somebody help me prevent my application from goijng to sleep, i know the ios code is,     application.idleTimerDisabled = YES; Does GC have an equivalent, if not what can  I do?
+21:48 < catid> hello
+21:49 < catid> yes hold on a second
+21:49 < catid> The way to do this is: import device;
+21:49 < catid> device.stayAwake(true);
+21:49 < catid> this works on iOS and Android
+21:49 < Guest57640> really, I'll give this a try, thanks a lot!
+21:50 < catid> np
