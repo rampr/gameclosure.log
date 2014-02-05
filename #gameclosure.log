@@ -1620,3 +1620,745 @@
 21:49 < catid> this works on iOS and Android
 21:49 < Guest57640> really, I'll give this a try, thanks a lot!
 21:50 < catid> np
+--- Day changed Tue Jan 21 2014
+08:36 < JFlash_> Howdy
+08:36 < JFlash_> anyone awake?
+08:36 < JFlash_> Just found out about GameClosure :)
+--- Log opened Tue Jan 21 13:09:56 2014
+13:09 -!- Irssi: #gameclosure: Total of 18 nicks [1 ops, 0 halfops, 0 voices, 17 normal]
+13:09 -!- Irssi: Join to #gameclosure was synced in 3 secs
+14:08 < oodavid> \join #mysql
+14:08 < oodavid> user-error!
+14:08 < oodavid> mybad :-)
+--- Log closed Wed Jan 22 11:06:21 2014
+--- Log opened Wed Jan 22 11:11:39 2014
+11:11 -!- Irssi: #gameclosure: Total of 18 nicks [1 ops, 0 halfops, 0 voices, 17 normal]
+11:11 -!- Irssi: Join to #gameclosure was synced in 9 secs
+14:11 < scull> Hi everyone !
+14:11 < scull> I have a question about animation and especially rotations
+14:12 < scull> When i make a rotation on a view, i set "anchorX" and "anchorY" value and i make the rotation
+14:12 < scull> After this rotation, i want to translate the view
+14:13 < scull> But before that, i want to "reset" the "r" value of the view (to rotate it again after the translation)
+14:13 < scull> But, if i reset "anchorX", "anchorY" and "r" values, my view make a jump in the screen !
+14:14 < scull> do you know a good method to reset rotation values of a view ?
+14:20 < scull> So, i want to know if I can apply an operation to my view, and it keep X and Y position, but "anchorX", "anchorY" and "r" are equals to zero.
+15:28 < scull> Sorry but i must quit, i post a question on google groop about my issue : https://groups.google.com/forum/#!topic/game-closure-devkit/ONiqtUkGhz8
+15:28 < scull> Have a nice day !
+--- Log closed Fri Jan 24 13:13:51 2014
+--- Log opened Fri Jan 24 13:14:13 2014
+13:14 -!- Irssi: #gameclosure: Total of 17 nicks [1 ops, 0 halfops, 0 voices, 16 normal]
+13:14 -!- Irssi: Join to #gameclosure was synced in 5 secs
+--- Log closed Fri Jan 24 13:19:41 2014
+--- Log opened Fri Jan 24 13:19:58 2014
+13:19 -!- Irssi: #gameclosure: Total of 16 nicks [1 ops, 0 halfops, 0 voices, 15 normal]
+13:19 -!- Irssi: Join to #gameclosure was synced in 7 secs
+22:51 < catid> ugh, Android sound loading is sooo slow
+22:51 < catid> iOS is instantaneous..
+23:10 < catid> aah
+23:10 < catid> it's important to use OGG audio on android
+23:10 < catid> otherwise it takes forever to load
+--- Day changed Sun Jan 26 2014
+15:04 -!- werebutt [~buttbutt@109.201.154.163] has left #gameclosure []
+18:31 < Athos> hi
+18:32 -!- Athos is now known as Guest85350
+18:32 < Guest85350> i had question involving style for textviews, is there a guide or creating a style object that all textviews can follow?
+18:32 < Guest85350> similar to how you would handle it in android
+18:37 < Guest85350> also within a textview is it possible to create new lines with <br> or something, that would be very useful to me
+--- Log closed Mon Jan 27 03:48:47 2014
+--- Log opened Mon Jan 27 03:49:03 2014
+03:49 -!- Irssi: #gameclosure: Total of 15 nicks [1 ops, 0 halfops, 0 voices, 14 normal]
+03:49 -!- Irssi: Join to #gameclosure was synced in 7 secs
+05:05 -!- frankbutt [~frankbutt@66.172.11.32] has left #gameclosure []
+--- Day changed Tue Jan 28 2014
+04:16 < debarko> catid, hey man how are you
+21:18 < catid> hello
+21:18 < catid> recently i've been fixing a bunch of android native issues
+21:18 < catid> we also have a new spriter
+21:18 < debarko_> wow.. awesome!! :)
+21:20 < catid> i've noticed that the android builds have been freezing on homescreening
+21:20 < catid> that was caused by several issues that are now addressed
+21:21 < catid> also, when we detect out of memory conditions there is a weird "Oops!  There is something wrong" message, which sometimes shows up twice
+21:21 < catid> that's new a much smoother flow so shouldn't confuse users
+21:22 < catid> also, the accelerometer shake detection now supports older android devices that don't give accelerometer updates as frequently
+21:22 < catid> and all of the plugins have had some kinds of improvements over the last few weeks
+21:27 < catid> we've also been doing a lot more with browser builds lately
+21:27 < catid> so those are much better supported now in the latest timestep code
+21:27 < debarko_> catid, are they workin on IE?
+21:27 < debarko_> browser builds?
+21:27 < catid> i don't think that's been looked at
+21:28 < debarko_> k.. if possible try visiting that part as well... :)
+23:10 < PierrickB> catid: so, that was the problem with android ! I was wondering why builds were sometimes freezing (had to reload). Tks :)
+23:10 < catid> will look into making a release later this week
+--- Day changed Wed Jan 29 2014
+08:22 -!- ChrisReilly [~chris@77.95.35.22] has left #gameclosure []
+23:40 -!- Birdbones is now known as Guest27067
+--- Day changed Thu Jan 30 2014
+13:18 -!- Guest27067 is now known as Birdbones
+21:15 -!- mazyod1 [~Adium@192-195-83-167.PUBLIC.monkeybrains.net] has left #gameclosure []
+--- Day changed Fri Jan 31 2014
+02:28 < glaksmono> anyone is around?
+17:41 < oodavid> glaksmono, I'm around!
+17:41 < oodavid> I lurk 9-5 at UK time
+17:45 < glaksmono> hi oodavid
+17:45 < glaksmono> nice
+17:46 < glaksmono> u still there?
+17:46 < oodavid> indeed I am
+17:46 < glaksmono> i'm looking at gameclosure as options to my engine :)
+17:46 < glaksmono> may be i'll ping u when i have questions
+17:46 < glaksmono> but it's looking good so far
+17:46 < oodavid> ofcourse
+17:46 < oodavid> well, I'm a hobbyist and spend maybe an hour a day / every other Sunday with it
+17:47 < oodavid> it's been a very enjoyable experience
+17:47 < oodavid> what sort of thing are you making?
+18:01 < glaksmono> i'm trying to port my current game from craftyjs to use gameclosure
+18:01 < glaksmono> sooo now i'm actually taking out my basil init to another folder
+18:01 < glaksmono> and that doesn't seem to register the reference properly
+18:03 < glaksmono> it's 404 now
+18:03 < glaksmono> sigh
+18:09 < glaksmono> oodavid,
+18:27 < oodavid> Have you written it with MVC?
+18:28 < oodavid> If so it should be a case of updating your Views to utilise the gameclosure Views
+18:30 < catid> good morning
+18:31 < catid> going to release a new devkit with the fixes i mentioned a few days ago, and also the back button in the simulator will trigger the back button event properly in games again
+18:48 < glaksmono> hi, how do you repeat-x ?
+18:48 < glaksmono> on a view?
+18:48 < glaksmono> ImageView actually
+18:50 < catid> i believe it works the same as the normal HTML5 repeat style
+18:50 < catid> if that doesn't work then it's broken
+18:50 < glaksmono> err, but i just have JavaSCript object
+18:50 < catid> the style object is like CSS styles
+18:52 < catid> ah i see
+18:53 < catid> view.style.fillStyle = {"repeatPattern": "repeat-x"};
+18:53 < catid> i think that works on native builds
+18:53 < catid> maybe in the browser too
+18:53 < glaksmono> catid, i tried this: https://gist.github.com/glaksmono/88e182836a5c49624ab9
+18:53 < glaksmono> doesn't seem to be working
+18:54 < glaksmono> i'm for the mobile browser build
+18:54 < catid> try the fillStyle variation above
+18:55 < glaksmono> hmm
+18:55 < glaksmono> doesn't seem to work...
+18:55 < catid> i think it needs to look like this: http://www.html5canvastutorials.com/tutorials/html5-canvas-patterns-tutorial/
+18:56 < catid> on our context object we do have a createPattern function
+18:59 < glaksmono> catid, i'm actually not sure what do u mean by "context object"
+18:59 < glaksmono> sorry this is my first time using gameclosure
+18:59 < glaksmono> i've just read some stuff about it
+19:00 < catid> check out the Advanced Rendering example
+19:01 < catid> basil install examples  if you don't have the examples yet
+19:01 < catid> there's on for Tiles under Advanced Rendering, which shows how to get a context object and stuff like that
+19:06 < glaksmono> catid, that seems to be a bit more complicated than i thought it should be..
+19:06 < glaksmono> i don't really want to create "tiles" per-se..
+19:06 < glaksmono> in DOM, usually we just do repeat-x
+19:08 < catid> i see
+19:08 < catid> it seems like those examples are for off-screen canvases
+19:09 < catid> i mean if the game is never going to run on a native device then you could just bypass a lot of the devkit conventions
+19:09 < catid> the main reason to stick to them is so that your game can be run as a native app
+19:10 < glaksmono> hmm, what do you mean though?
+19:10 < glaksmono> i'm just plnaning to compile these as browser-mobile
+19:10 < catid> you don't want your app to run as a real app store or play store app right?
+19:10 < catid> just in the mobile browser
+19:11 < catid> the devkit is built to make it easier to write that kind of real app
+19:11 < glaksmono> catid, well.. potentially may be.. but no plans yet for now
+19:11 < catid> if you don't want to do that then it would probably be better to use a toolkit designed for web browsers
+19:11 < glaksmono> soooo... what is this "toolkit" that you're talking about?
+19:11 < glaksmono> is it part of the gameclosure?
+19:12 < catid> ie. something that isn't GC devkit
+19:12 < catid> there are lots of HTML5 game development kits
+19:12 < catid> this one is designed mainly for native apps
+19:13 < glaksmono> i see
+19:13 < catid> here: http://mobilegameengines.com/html5/2d_game_engines
+19:13 < glaksmono> got what u meant..
+19:13 < glaksmono> well i guess then, sure, we may be planning to port this into iOS
+19:14 < glaksmono> and android
+19:14 < glaksmono> but not anytime soon.. i think gameclosure is pretty good mediator between all platforms, that's why i picked it
+19:16 < catid> i know we've done repeating backgrounds before to hack some HTML5 games to run on it
+19:16 < catid> lemme find the blog post..
+19:16 < catid> it was this one: http://www.gameclosure.com/blog/2013/03/space-blaster-meets-mobile
+19:18 < glaksmono> hmmm catid
+19:18 < glaksmono> the thing is that this example uses the whole canvas and repeating the element within the canvas right?
+19:18 < catid> yeah
+19:18 < glaksmono> for me... i wanted to have like multiple repeating elements on the top of canvas
+19:19 < glaksmono> so imagine like... 1 background.. cover
+19:19 < catid> like the cicada principle?
+19:19 < glaksmono> then on the top of that background, i want to repeat... buildings
+19:20 < glaksmono> yeah, pretty much
+19:20 < glaksmono> so basically.. you have different layers with different repeating element
+19:20 < glaksmono> z at 5 could be repeat y
+19:20 < catid> well it does support transparencies in your images
+19:20 < glaksmono> and z at 3 could be repeat x
+19:20 < catid> so you can layer things
+19:21 < catid> but you should know that on native platforms it would be very slow to redraw the whole screen several times over
+19:21 < glaksmono> hmmm so what is your suggestion?
+19:21 < catid> it would be much more efficient to render this background to an off-screen canvas once and then render the canvas each frame
+19:21 < glaksmono> so i wanted to draw buildings repeated on x direction
+19:21 < glaksmono> how would you do it?
+19:22 < glaksmono> hmmm.. but it doesn't move does it?
+19:22 < catid> are you doing a parallax effect?
+19:22 < glaksmono> yes
+19:22 < glaksmono> parallax.. is like.. that should be moving right?
+19:22 < catid> we do have a runner demo with parallax background
+19:22 < glaksmono> so it's like.. building, and then it moves toward x direction
+19:23 < catid> the foreground moves faster than the background = parallax
+19:24 < catid> under devkit/projects/platformer
+19:25 < catid> that example is also good because it has a good introduction to view pools which is important to make your game run smoothly
+19:28 < glaksmono> catid, this is interesting..
+19:28 < glaksmono> i see that the width of the image and the actual width that's defined is the same
+19:28 < glaksmono> i'mw ondering on how does it handle retina vs. non-retina?
+19:29 < catid> everything should be scaled to look the same overall
+19:29 < catid> on a screen with more pixels ("retina") it will just have more detail or cleaner lines
+19:30 < glaksmono> interesting..
+19:30 < glaksmono> it renders it pretty well on the simulator
+19:30 < glaksmono> so all images are suppose to be on retina size right?
+19:30 < glaksmono> and then the engine will handle for the smaller devices?
+19:30 < catid> images should fit within 1024x1024 spritesheets
+19:30 < catid> spriting is done for you
+19:30 < glaksmono> cool
+19:30 < glaksmono> let me play around then
+19:30 < glaksmono> thank you so much catid
+19:30 < glaksmono> are you contributor ?
+19:31 < catid> yea
+19:31 < glaksmono> nice
+19:31 < glaksmono> cooll
+19:37 < glaksmono> catid,
+19:37 < glaksmono> sooo.. the width should always be 1024?
+19:37 < glaksmono> if i want it to always take the full screen?
+19:38 < catid> no each image should have dimensions under 1024x1024 so that it can be displayed on mobile native apps
+19:38 < catid> typical images are 32x32 pixels or so
+19:38 < catid> OpenGL ES does not support larger than 1024x1024 textures
+19:38 < glaksmono> soo, i noticed that on paralax example... all of the fargroundBrushes are 1024 width..
+19:38 < catid> how things fit to the screen is entirely up to you, you can scale or whatnot
+19:38 < glaksmono> i think that way it could be displayed as the background,, right?
+19:39 < catid> there are no special sizes
+19:39 < catid> it's all just views with textures on them
+19:39 < catid> you can fit them to the screen to make them into backgrounds
+19:39 < glaksmono> yes, but i guess if it's smaller than 1024, then u have to scale up.. and that may distort the image
+19:39 < catid> yes
+19:39 < catid> larger is usually better for backgrounds
+19:40 < glaksmono> cool that makes sense
+19:40 < catid> also, phones are not square in screen dimension
+19:40 < catid> so you probably want one dimension of your backgrounds to be larger than the other
+19:41 < catid> our game backgrounds for a portrait-oriented game are 578x1024
+19:41 < catid> and we cut off the top/bottom to fit it fully to the screen
+19:42 < glaksmono> hmmm but why would it be 578 width?
+19:42 < glaksmono> sooo my case for example... 697???530
+19:42 < glaksmono> but on Nexus 5
+19:43 < catid> that works for the most narrow phones out there
+19:43 < glaksmono> then that's not enough width
+19:43 < glaksmono> ah yeah
+19:43 < glaksmono> but that will break on nexus right?
+19:43 < catid> why?
+19:43 < glaksmono> Galaxy Nexus.. 720 x 1184
+19:43 < catid> step 1. scale background to fit screen horizontally
+19:44 < glaksmono> ohhh i see
+19:44 < glaksmono> so u scaled it
+19:44 < glaksmono> but then it's not gonna be that sharp
+19:44 < glaksmono> ok ok
+19:44 < glaksmono> i got it..
+19:44 < glaksmono> so u scaled it for larger devices
+19:44 < catid> well it can't be any bigger :)
+19:44 < catid> we could have multiple textures for the background but seems like more hassle than it's worth and it looks great
+19:45 < glaksmono> got it..
+19:54 < glaksmono> catid, sooo... i'm now trying to understand on how does it setup the avatarKiwiAce
+19:54 < glaksmono> i'm getting this error
+19:54 < glaksmono> Uncaught TypeError: Cannot read property 'frames' of undefined
+19:54 < glaksmono> thoughts?
+19:54 < glaksmono> i just have 2 images..
+19:54 < glaksmono> and i set it up like...
+19:54 < glaksmono> images/baby
+19:54 < catid> probably there is a variable named frames
+19:54 < glaksmono> images/baby/baby_run_0001.png
+19:55 < catid> and you need to set it to something before using it
+19:55 < catid> oh the object that it should be in is not set to a real object
+19:55 < glaksmono> eh?
+19:55 < catid> you have something like this: x.y = 1;
+19:55 < catid> but x = {};
+19:55 < catid> err
+19:55 < catid> x = undefined
+19:56 < catid> you need to set the x to something before using a property of it in JavaScript
+19:56 < catid> that's what that error means
+19:57 < glaksmono> well the error is actually coming frmo the engine though..
+19:57 < glaksmono> i'm just trying to set it up the same way as the one that platformer had
+19:57 < glaksmono> but i just changed the image
+19:57 < glaksmono> and it broke
+19:58 < glaksmono> not sure what i'm missing here
+19:58 < glaksmono> well i'm assuming i'm not sure where does it know to go from frame 1 to frame 2
+19:58 < catid> trying out the platformer..
+19:58 < catid> seems to work OK
+19:59 < glaksmono> ah i got it
+19:59 < glaksmono> hmmm ok
+19:59 < glaksmono> now i'm not seeing the image tho
+19:59 < glaksmono> let me see
+21:50 < glaksmono> catid, u there?
+21:50 < catid> yes
+21:51 < glaksmono> catid, any ideas what caused the platformer example not accepting the second subsequent tab?
+21:51 < glaksmono> i want it so that on each tap, it pushes the thing upward
+21:51 < catid> i think the code right now only allows you to super-jump once
+21:51 < catid> you could find that code and eliminate the check
+21:52 < glaksmono> oh i think i see it
+22:47 < glaksmono> catid, u there?
+22:47 < catid> yes
+22:47 < glaksmono> nice :D
+22:47 < glaksmono> sooo
+22:47 < glaksmono> i have a problem that i wanted to repeat-y
+22:47 < glaksmono> :-/
+22:47 < glaksmono> how do i do that?
+22:48 < glaksmono> repeat y
+22:48 < glaksmono> right now i can have the sreen moves
+22:48 < glaksmono> i wanted to create something that's repeat-y
+22:48 < glaksmono> basically like a wall
+22:48 < glaksmono> https://gist.github.com/glaksmono/88e182836a5c49624ab9
+22:48 < glaksmono> scaling the style.. would actually destort it
+22:48 < catid> it looks like the repeat[-x][-y] stuff is supported in some way
+22:48 < catid> i see it in our context2d
+22:49 < catid> and it was working at one point
+22:49 < glaksmono> i tried to use backgroundRepeat, doesn't seem to be working
+22:49 < glaksmono> so basically i need to set height = 500
+22:49 < glaksmono> and then.. repeat-y
+22:49 < glaksmono> thoughts?
+22:50 < catid> it looks like you have to use ctx.fillRect() to make use of it though
+22:50 < catid> rather than allowing the normal timestep rendering to render it for you
+22:50 < glaksmono> ugh
+22:50 < glaksmono> how do i do that?
+22:50 < glaksmono> any examples?
+22:50 < catid> well that blog post i pointed you at does but it also does a lot of other things
+22:51 < glaksmono> hmmm
+22:51 < catid> could you just create a bunch of views?
+22:51 < catid> and tile them down the screen
+22:51 < glaksmono> ahhh
+22:51 < glaksmono> that's right
+22:51 < glaksmono> that would work easier
+22:51 < glaksmono> hmm
+23:27 < glaksmono> hi catid
+23:27 < catid> hello
+23:27 < glaksmono> sooo.. currently when i tap, it could fly really high..
+23:27 < glaksmono> how do you disable that?
+23:27 < glaksmono> as in the screen actually moves with the y
+23:27 < catid> you could edit the JavaScript code
+23:28 < glaksmono> which part is that?
+23:28 < catid> i would need to look at the code
+23:29 < glaksmono> or may be what's the term of it?
+23:29 < glaksmono> so that i could search
+23:29 < catid> sorry no idea
+23:30 < glaksmono> ah i think i know
+23:30 < glaksmono> scrollTo
+23:30 < glaksmono> hmm
+23:30 < glaksmono> thanks :)
+23:56 < glaksmono> hey catid, it seems like it's being rendered much much bigger on the actual android devices.. i think that's cuz they don't support retina, how do people usually handle this?
+23:56 < glaksmono> do i need to manually divide the width and the height?
+23:56 < glaksmono> i'm assuming
+23:56 < glaksmono> it looks fine on the simulator tho
+23:57 < catid> i think the physical dimensions are in device.width and device.height if you import device;
+23:57 < catid> so when you set the size/position of a view, it is from 0..width and 0..height
+23:58 < catid> view.style.x = 0 would put it on the left
+23:58 < catid> view.style.x = device.width - 100; would offset it 100 pixels from the right
+23:58 < catid> if you want to scale things to fit to the screen, there are some shortcuts in the layout system
+23:59 < catid> but those are best used for menu systems
+23:59 < catid> and it's faster to just scale things with math
+23:59 < glaksmono> i believe i need to get the deviceToPixel ratio
+23:59 < catid> don't think so..
+23:59 < glaksmono> hmmm..
+--- Day changed Sat Feb 01 2014
+00:00 < catid> in our production games on the stores, we only use device.width and device.height to scale everything
+00:01 < glaksmono> hmmm... soooo
+00:02 < glaksmono> so our assets are made for the retina pixels..
+00:02 < glaksmono> i need a logic where it's like..
+00:02 < glaksmono> if devicetoPixel ratio is 2, then let it stay the same
+00:02 < glaksmono> otherwise, divide it by 2
+00:02 < glaksmono> the style.width and style.height
+00:03 < catid> here's some code to help you:
+00:03 < catid> https://gist.github.com/chris-gc/8745857
+00:03 < catid> we use this to scale our views across different device resolutions for our portait-mode games
+00:04 < catid> this way, you can design for virtual pixels where the screen is always "576 pixels" wide
+00:04 < catid> and multiply positions/sizes by scaling factors to place on the screen correctly
+00:06 < glaksmono> catid, sooo... that doesn't seem to work..
+00:06 < glaksmono> i just tested it..
+00:06 < catid> well it's not something you can just copy/paste
+00:07 < catid> it's just a way to show you how it should be done
+00:19 < glaksmono_> catid, i guess i still haven't grasp the concept of how you're approaching the retina vs. non-retina support..
+00:19 < glaksmono_> usually in DOM we just divide the height and width by 2
+00:19 < glaksmono_> i tried the devicePixelRatio, it doesn't seem to be working.. for some reason
+00:19 < glaksmono_> it only works on simulator
+00:19 < glaksmono_> but not on actual phone
+00:20 < catid> on a retina iPad we scale things in the native code to work the same as a non-retina iPad
+00:20 < catid> so you don't need to know that stuff in your game code
+00:20 < catid> i'm not sure if mobile browser on a retina device are working
+00:21 < catid> but you can test on a normal device in the simulator and it will run the same on any real device
+00:22 < glaksmono_> ah yeah
+00:22 < glaksmono_> this is on mobile browser that i'm testing..
+00:22 < glaksmono_> not native..
+00:23 < catid> hrm, well i spend all day making sure the native iOS/Android builds of our games work properly so i have no experience with the mobile browser builds
+00:24 < catid> i know the devicePixelRatio is exposed to you, so you can grab it and scale your stuff appropriately
+00:24 < catid> because it's in a browser all the normal browser features are there
+00:27 < glaksmono_> yeah, but it doesn't seem to detect it correctly on nexus phone seems like
+00:58 < glaksmono_> catid, how do you change the width and height of SpriteView ?
+00:58 < glaksmono_> i'mt rying to divide the width and height by 2
+00:58 < glaksmono_> thid doesn't seem to work
+00:58 < catid> view.style.width and view.style.height
+00:58 < glaksmono_> this.player.style.width = this.player.style.width / 2;
+00:58 < glaksmono_> hmm
+00:58 < glaksmono_> that doesn't work..
+00:59 < glaksmono_> looked like this: https://gist.github.com/glaksmono/9930f8416580811f90f1
+01:00 < glaksmono_> ideas catid ?
+01:01 < catid> looks OK to me
+01:01 < catid> have JS errors in the console?
+01:01 < catid> maybe the image cannot be found or something
+01:03 < glaksmono_> no error :-/ catid
+01:03 < glaksmono_> not scaling on simulator as well
+01:06 < glaksmono_> what is autoSize?
+01:06 < glaksmono_> when i removed that, it's just gone..
+01:06 < glaksmono_> it wouldn't even render
+01:06 < catid> you need to set a width/height if that isn't set
+01:09 < glaksmono_> still doesn't scale it
+01:09 < catid> oh yeah that explains why width/height was doing nothing perhaps
+01:09 < catid> if autoScale is true it may ignore those
+01:11 < catid> jimmy says the width/height can be changed on a spriteview to scale them
+01:11 < catid> so that should be working
+01:22 < glaksmono_> ah yea
+01:22 < glaksmono_> that's right
+01:22 < glaksmono_> it works
+01:22 < glaksmono_> thanks catid
+01:22 < glaksmono_> :)
+01:23 < glaksmono_> but now i have the problem where the sizes are too small for retina phones
+01:23 < glaksmono_> hmmmmm
+01:23 < glaksmono_> cuz i divide everything by 2
+01:23 < glaksmono_> but it looks perfect on android phone
+01:40 < catid> you can check device.isAndroid i think
+01:41 < catid> or whatever makes sense there
+01:42 < glaksmono_> errr
+01:42 < glaksmono_> not seeing that actually
+01:44 < glaksmono_> http://screencast.com/t/i4NTjDIA
+01:45 < catid> well, it's undefined :)
+01:45 < catid> you can still do if (device.isAndroid)
+01:45 < catid> however that's only for native builds
+01:45 < glaksmono_> snap
+01:45 < glaksmono_> yeah, then that only works on native build i think
+01:46 < glaksmono_> i'm on browser..
+01:53 < catid> heading out pretty soon
+01:53 < glaksmono_> hmmm... thought of good idea on how to get around this catid ?
+01:53 < glaksmono_> seems like u know more on native instead of browser eh?
+01:53 < catid> no i'm not sure what the problem is
+01:54 < glaksmono_> soo basically.. our assets are intended for retina phones..
+01:54 < glaksmono_> that means if it's displayed on non-retina phones, then it'd be too big
+01:54 < catid> i'm not sure what you mean by retina
+01:54 < glaksmono_> so i have to divide all of the views by 2
+01:54 < catid> retina is an apple marketing gimmick
+01:54 < catid> images for these games should be under 1024x1024 in size
+01:55 < glaksmono_> hmm ok
+01:55 < catid> and you should fix the screen width at 576 pixels and scale everything to that
+01:55 < glaksmono_> why 576?
+01:55 < catid> (or height for landscape games)
+01:55 < catid> it's just a good realistic number to use based on 1024 pixel limits
+01:56 < glaksmono_> wait sooo
+01:56 < glaksmono_> this code that you gave me
+01:56 < glaksmono_> that means... all phones are going to have that size?
+01:56 < glaksmono_> 576 width?
+01:56 < glaksmono_> is that what it's doing?
+01:56 < glaksmono_> i guess i don't really understand your code..
+01:56 < glaksmono_> https://gist.github.com/chris-gc/8745857
+01:56 < catid> it is calculating scaling factors
+01:56 < glaksmono_> i tried that it doesn't seem to do anything
+01:56 < catid> you need to understand the math
+01:56 < glaksmono_> not sure about the content_ratio and BG_ratio
+01:57 < glaksmono_> ABS_RATIO is aspectratio i think?
+01:57 < catid> the idea is to treat every screen as having the same width
+01:57 < glaksmono_> ah ok
+01:57 < glaksmono_> cool
+01:57 < catid> so that the game looks roughly the same
+01:57 < glaksmono_> soooo..
+01:57 < catid> all your fixed values can then assume 576 pixel screens
+01:57 < glaksmono_> after we have your code, what else do i need to do?
+01:57 < catid> but when you add view styles you need to scale to the real screen size
+01:57 < glaksmono_> i only support portrait, not landscape
+01:57 < catid> good that works with the gist
+01:58 < glaksmono_> yeah, sooo.. i can copy and paste your code right?
+01:58 < catid> yeah you can put it in a config.js file
+01:58 < glaksmono_> then i'm not sure what do you mean by "scale to the real screen size"
+01:58 < catid> then import config; to bring it in
+01:58 < catid> and config.BLAH to access the calculations
+01:58 < catid> well you want to pretend the screen is 576 pixels wide
+01:59 < catid> and you want to place an object at 10,20 on the virtual screen
+01:59 < catid> then you do view.style.x = 10 * config.SCALE_WHATEVER;
+01:59 < catid> to get the actual pixels for the device it is on
+01:59 < catid> but this way you can position things easily
+02:00 < catid> and it will look consistent
+02:00 < glaksmono_> hmmm
+02:00 < glaksmono_> scaling the x and y as well?
+02:00 < glaksmono_> not the width and height?
+02:00 < catid> yea
+02:00 < catid> anything related to pixels
+02:00 < catid> then you can decide if you want to clip the top or the bottom or both
+02:00 < catid> so on a wide iPad it is heavily clipped
+02:01 < catid> and on a slip Nexus 5 it is not clipped
+02:01 < catid> slim*
+02:01 < glaksmono_> ok sooo.. can you give an example
+02:01 < glaksmono_> let's say i have view
+02:01 < glaksmono_> size 100x100
+02:01 < glaksmono_> i scale that 100 with exports.FULL_SCREEN_WIDTH ?
+02:01 < catid> i'm not sure what those scaling factors actually are in the file
+02:01 < catid> and i'm not sure if you need to do anything extra for mobile browsers
+02:02 < catid> this is just what i'm seeing our gamedevs do
+02:02 < catid> you'll have to work through the math to see if it makes sense for you
+02:03 < glaksmono_> ah i see..
+02:03 < glaksmono_> i guess yeah, i don't really understand how does the math makes sense..
+02:03 < glaksmono_> or at least i'm not seeing it
+02:03 < glaksmono_> i just see that at least there are 3 things that we can use here
+02:03 < glaksmono_> exports.FULL_SCREEN_WIDTH, exports.FULL_SCREEN_HEIGHT, and exports.FULL_SCREEN_SCALE
+16:13 < oodavid> catid - did you manage to release the new devkit
+21:18 < Athos> Hello, I think i found something iffy in the way textview is handled
+21:18 -!- Athos is now known as Guest81059
+--- Day changed Sun Feb 02 2014
+03:41 < bhldev_> hi guys was off for awhile moving now I'm back
+03:41 < bhldev_> catid you still alive? lol
+10:40 -!- joshthecoder_ is now known as joshthecoder
+--- Day changed Mon Feb 03 2014
+01:01 -!- Guest27067 is now known as 92AAAT7B4
+--- Log closed Mon Feb 03 01:46:47 2014
+--- Log opened Mon Feb 03 02:23:10 2014
+02:23 -!- ServerMode/#gameclosure [+ns] by dickson.freenode.net
+02:23 -!- Irssi: #gameclosure: Total of 1 nicks [1 ops, 0 halfops, 0 voices, 0 normal]
+02:23 -!- Irssi: Join to #gameclosure was synced in 7 secs
+--- Log closed Mon Feb 03 02:30:01 2014
+--- Log opened Mon Feb 03 02:42:41 2014
+02:42 -!- Irssi: #gameclosure: Total of 11 nicks [1 ops, 0 halfops, 0 voices, 10 normal]
+02:43 -!- Irssi: Join to #gameclosure was synced in 97 secs
+--- Log closed Mon Feb 03 04:04:01 2014
+--- Log opened Mon Feb 03 05:49:59 2014
+05:49 -!- Irssi: #gameclosure: Total of 3 nicks [0 ops, 0 halfops, 0 voices, 3 normal]
+05:50 -!- Irssi: Join to #gameclosure was synced in 20 secs
+06:10 -!- ServerMode/#gameclosure [+o ChanServ] by hubbard.freenode.net
+--- Log closed Mon Feb 03 06:25:15 2014
+--- Log opened Mon Feb 03 06:53:28 2014
+06:53 -!- ServerMode/#gameclosure [+ns] by leguin.freenode.net
+06:53 -!- Irssi: #gameclosure: Total of 1 nicks [1 ops, 0 halfops, 0 voices, 0 normal]
+--- Log closed Mon Feb 03 06:53:28 2014
+--- Log opened Mon Feb 03 07:27:15 2014
+07:27 -!- ServerMode/#gameclosure [+ns] by holmes.freenode.net
+07:27 -!- Irssi: #gameclosure: Total of 1 nicks [1 ops, 0 halfops, 0 voices, 0 normal]
+--- Log closed Mon Feb 03 07:27:15 2014
+--- Log opened Mon Feb 03 07:38:05 2014
+07:38 -!- Irssi: #gameclosure: Total of 2 nicks [0 ops, 0 halfops, 0 voices, 2 normal]
+07:38 -!- Irssi: Join to #gameclosure was synced in 33 secs
+--- Log closed Mon Feb 03 07:59:37 2014
+--- Log opened Mon Feb 03 08:01:35 2014
+08:01 -!- Irssi: #gameclosure: Total of 2 nicks [0 ops, 0 halfops, 0 voices, 2 normal]
+08:01 -!- Irssi: Join to #gameclosure was synced in 109 secs
+--- Log closed Mon Feb 03 08:26:13 2014
+--- Log opened Mon Feb 03 08:26:56 2014
+08:26 -!- ServerMode/#gameclosure [+ns] by dickson.freenode.net
+08:26 -!- Irssi: #gameclosure: Total of 1 nicks [1 ops, 0 halfops, 0 voices, 0 normal]
+08:26 !dickson.freenode.net [freenode-info] help freenode weed out clonebots -- please register your IRC nick and auto-identify: http://freenode.net/faq.shtml#nicksetup
+08:27 -!- Irssi: Join to #gameclosure was synced in 20 secs
+--- Log closed Mon Feb 03 08:41:09 2014
+--- Log opened Mon Feb 03 08:42:24 2014
+08:42 -!- Irssi: #gameclosure: Total of 2 nicks [0 ops, 0 halfops, 0 voices, 2 normal]
+08:42 -!- Irssi: Join to #gameclosure was synced in 17 secs
+08:56 -!- ServerMode/#gameclosure [+o ChanServ] by hubbard.freenode.net
+--- Log closed Mon Feb 03 09:14:21 2014
+--- Log opened Mon Feb 03 09:20:39 2014
+09:20 -!- Irssi: #gameclosure: Total of 14 nicks [1 ops, 0 halfops, 0 voices, 13 normal]
+09:20 -!- Irssi: Join to #gameclosure was synced in 9 secs
+--- Log closed Mon Feb 03 09:48:33 2014
+--- Log opened Mon Feb 03 09:59:53 2014
+09:59 -!- ServerMode/#gameclosure [+ns] by pratchett.freenode.net
+09:59 -!- Irssi: #gameclosure: Total of 1 nicks [1 ops, 0 halfops, 0 voices, 0 normal]
+09:59 -!- Irssi: Join to #gameclosure was synced in 8 secs
+10:02 -!- ServerMode/#gameclosure [-o gc-logger] by pratchett.freenode.net
+10:02 !pratchett.freenode.net *** Notice -- TS for #gameclosure changed from 1391421593 to 1340905378
+10:02 -!- ServerMode/#gameclosure [+ct-s] by pratchett.freenode.net
+10:02 -!- ServerMode/#gameclosure [+o ChanServ] by pratchett.freenode.net
+10:02 -!- pratchett.freenode.net changed the topic of #gameclosure to: Game Closure DevKit : Subscribe to our blog at http://www.gameclosure.com/blog/   If we are sleeping, file bug reports and questions here: http://doc.gameclosure.com/support.html
+--- Log closed Mon Feb 03 10:09:56 2014
+--- Log opened Mon Feb 03 10:16:44 2014
+10:16 -!- Irssi: #gameclosure: Total of 14 nicks [1 ops, 0 halfops, 0 voices, 13 normal]
+10:17 -!- Irssi: Join to #gameclosure was synced in 42 secs
+--- Log closed Mon Feb 03 10:27:54 2014
+--- Log opened Mon Feb 03 10:54:17 2014
+10:54 -!- Irssi: #gameclosure: Total of 9 nicks [1 ops, 0 halfops, 0 voices, 8 normal]
+10:54 -!- Irssi: Join to #gameclosure was synced in 7 secs
+16:21 -!- ServerMode/#gameclosure [+o ChanServ] by kornbluth.freenode.net
+17:15 -!- Birdbones [sid1670@gateway/web/irccloud.com/x-wqhgkgvyutsamcry] has left #gameclosure []
+17:38 < glaksmono> anyone is around?
+17:38 < glaksmono> catid, u there?
+17:46 < glaksmono> https://groups.google.com/forum/#!topic/game-closure-devkit/yZ49qeoPRWw <--- still trying to figure :-/
+17:46 < glaksmono> i guess more precisely on implementation level..
+18:12 < PierrickB> catid: seems weird that in the "Internationalization" tab the linked example is off topic : http://doc.gameclosure.com/example/images-cover-contain/
+18:25 < glaksmono> it's really interesting by looking at the platformer example.. all of the sizes are on its real size and it's sharp on retina display..
+18:25 < glaksmono> wondering how does gameclosure did the "magic"
+18:27 < catid> PierrickB: added that to my TODO list
+18:27 < catid> glaksmono: scaling is done for you on native platforms
+18:28 < catid> glaksmono: you only need to know pixel size of the screen as reported by device.width and device.height
+18:28 < catid> and fix your images to the screen based on those
+18:53 < glaksmono> catid,
+18:53 < glaksmono> i just changed the asset .png to the half size by replacing it, and for some reason it's blinking.. thoughts?
+18:53 < glaksmono> it worked fine on my bigger assets
+18:54 < catid> if the graphic is part of an animation,
+18:54 < catid> then perhaps the size also needs to be adjusted elsewhere in the code
+18:54 < glaksmono> yes it's animation..
+18:55 < glaksmono> not seeing where i actually set the width and height..
+18:57 < catid> here are the docs and examples for imageview animations: http://docs.gameclosure.com/api/ui-images.html#class-ui.imageview
+19:05 -!- ServerMode/#gameclosure [+o ChanServ] by kornbluth.freenode.net
+21:01 < glaksmono> catid, for some reason if it's on the android webview.. it thinks that the device width and height much smaller than what it should be..
+21:02 < glaksmono> but if it's on chrome browser of the android device, the width and height of the device is detected properly..
+21:02 < glaksmono> thoughts?
+21:06 -!- octarine_ is now known as octarine
+21:08 < catid> no idea
+21:08 < catid> i've never done anything with mobile browsers personally
+21:09 < catid> the CTO is all about mobile browsers and has spent a lot of time on these problems, but he's not in today
+21:10 < catid> i'll ask around hold on a sec
+21:16 < glaksmono> catid, the way i'm hacking it:
+21:16 < glaksmono> https://gist.github.com/glaksmono/15e59b778f687a45490e
+21:17 < glaksmono> i'm not sure what's the diff between the screen and device.screen
+21:17 < glaksmono> but there's def something messed up there
+21:17 < glaksmono> but with that hack, it's pixelated on android web view
+21:18 < catid> sorry no one is here with browser experience right now :-/
+21:19 < catid> your best bet might be to google around for normal ways to detect these things
+21:52 < glaksmono> catid, http://docs.gameclosure.com/guide/scaling.html
+21:52 < glaksmono> solved my issue
+21:52 < catid> oh good
+21:52 < glaksmono> really intersting
+21:52 < glaksmono> so the idea is that we're using that 576 x 1024..
+21:52 < glaksmono> and then scale it based on that right?
+21:53 < glaksmono> so in case of iphone 5... that size is scaled up to 1136 x 640
+21:53 < glaksmono> heh
+21:53 < catid> yea i tried to explain this last time we talked, but i'm not so great at explaining :)
+21:53 < catid> the docs are better refs sometimes
+21:53 < glaksmono> haha, u were good
+21:53 < glaksmono> thanks a lot for helping out all these time :)
+21:54 < glaksmono> and btw the code there it has a minor bug..
+21:54 < glaksmono> var baseWidth = bounds_width;
+21:54 < glaksmono> it uses wrong var name
+21:54 < glaksmono> should be boundsWidth
+21:55 < catid> i see
+22:02 < catid> pushed a fix for that, should be reflected on the website next release
+22:11 < glaksmono> (y)
+22:22 < glaksmono> hey catid
+22:22 < glaksmono> if i don't want to use link instead..
+22:23 < glaksmono> lrwxr-xr-x  1 glaksmono  staff   37 Jan 30 18:20 sdk -> /Users/glaksmono/Documents/devkit/sdk
+22:23 < glaksmono> lrwxr-xr-x  1 glaksmono  staff   37 Jan 30 18:20 sdk -> /Users/glaksmono/Documents/devkit/sdk
+22:23 < glaksmono> for the sdk reference: lrwxr-xr-x  1 glaksmono  staff   37 Jan 30 18:20 sdk -> /Users/glaksmono/Documents/devkit/sdk
+22:23 < glaksmono> how do i do that?
+22:23 < glaksmono> i tried to remove that and paste "sdk"
+22:23 < glaksmono> didn't seem to work
+22:23 < glaksmono> thoughts?
+22:23 < catid> i'm confused
+22:24 < catid> when you run the basil build command i believe it regenerates that symlink for you
+22:24 < glaksmono> exactly
+22:24 < glaksmono> how do i make it "not symblink"
+22:24 < glaksmono> that way i can check that on its own folder
+22:24 < glaksmono> and ic an deploy it ?
+22:25 < catid> are you asking how to deliver the final code without the symlink?
+22:25 < glaksmono> yes
+22:25 < catid> you can just delete it
+22:25 < glaksmono> and then copy and paste src?
+22:25 < catid> when someone else builds it it will add that symlink on their PC
+22:25 < glaksmono> hmm
+22:25 < glaksmono> how to "builds" it?
+22:26 < glaksmono> i want to deploy this on heroku..
+22:26 < catid> basil debug browser-mobile --clean
+22:26 < glaksmono> hmm
+22:26 < catid> copies the app into build/debug/browser-mobile
+22:26 < catid> there are docs about building on the site
+22:27 < glaksmono> link?
+22:29 < catid> the best build docs are here: http://docs.gameclosure.com/native.html
+22:29 < glaksmono> err but that's for native
+22:29 < glaksmono> not for mobile web
+22:29 < glaksmono> :-/
+22:31 < catid> we don't have any docs for building for mobile browsers
+22:32 < catid> but it's not complex
+22:32 < catid> just do basil build and see the options
+22:47 < glaksmono> basically my problem now is that i wanted to integrate gameclosure into a rails app..
+22:47 < glaksmono> and it seems like there's not really a straightforward way to do that
+22:57 < glaksmono> anyone had experience integrating gameclosure and rails?
+22:57 < glaksmono> hmmm
+22:58 < catid> you could run the GC code in an iframe
+22:58 < glaksmono> eh?
+22:58 < glaksmono> what do u mean?
+22:58 < catid> store the game code on your web server
+22:58 < catid> write an iframe into the HTML code in the browser with source set to the game code location
+22:59 < catid> it will display within the iframe
+22:59 < glaksmono> hmmm but displaying within iframe isn't very good isn't it?
+22:59 < glaksmono> so the gamecanvas is within iframe?
+22:59 < glaksmono> hmmm
+22:59 < catid> i don't see the disadvantage
+23:00 < catid> you want the game to talk to your other JavaScript outside the game?
+23:00 < glaksmono> probably not
+23:00 < glaksmono> all of th eUI should be within the ganme
+23:00 < glaksmono> but rails will also host the web services..
+23:02 < glaksmono> don't think it's that simple actually
+23:02 < glaksmono> rails got assets pipeline..
+23:02 < glaksmono> and to deploy this gc
+23:03 < glaksmono> i need to build first..
+23:03 < glaksmono> and then deploy the build/browser-mobile
+23:03 < glaksmono> that's the client..
+23:03 < glaksmono> no one experienced with rails deployment?
+23:05 < catid> mm no sorry
+23:29 < glaksmono> catid, is there a way to include gameclosure as library instead of the whole set with emulator etc?
+23:29 < glaksmono> when i said library, it's just some js that i can include...
+23:30 < catid> i don't think so because of the import syntax of js.io
+23:30 < catid> your game code must be compiled before running
+--- Day changed Tue Feb 04 2014
+00:30 < bhldev> hiho catid
+00:30 < bhldev> I had a moment of weakness now I'm back
+00:30 < catid> good afternoon
+00:31 < catid> hah how do you mean?
+00:31 < bhldev> actually I moved
+00:31 < bhldev> went back to java even posted big post on coderanch saying I was going back
+00:32 < bhldev> but it doesn't work for what I want to do I want to make data driven game with scripting, nothing else but javascript works
+00:32 < bhldev> was thinking of 3d and box2d and other things
+00:35 < catid> i'm a fan of luajit
+00:36 < catid> so if you had a lot of time or developers working with you, building something with that would be ideal
+00:36 < catid> JavaScript has better tooling for fast projects tho
+00:52 < bhldev> I thought about lua
+00:53 < bhldev> I am too impatient to spend another half a year mastering another language though
+00:54 < bhldev> and how would I use it
+00:54 < bhldev> compile it to llvm then use emscripten? lol
+00:54 < catid> i'm still mastering C after over a decade
+00:54 < bhldev> emscripten solves all problems
+00:55 < catid> found out today that signed integer overflows are undefined behavior
+00:55 < bhldev> okay not master but know enough to make money off it
+00:55 < catid> and can cause weird optimization bugs
+00:55 < bhldev> yeah javascript is it
+00:56 < bhldev> and afaik gc is the only thing low level enough and without a predefined workflow so I can create my own
+00:57 < catid> cool to see we have a niche :)
+01:03 < bhldev> if I ever make it I'll release it
+01:04 < bhldev> after I make some $ off it of course
+01:04 < bhldev> lol
+01:14 < bhldev> actually I made the decision after dealing with totally unrelated problems
+01:14 < bhldev> my work is totally unrelated but we're trying to automate and the conclusion was without scripting we could never deal with edge or border cases, it's the same with everything
+01:15 < bhldev> like grunt or jake or build systems must be able to script the task there's no way you can anticipate everything
+01:19 < catid> interesting
+01:19 < catid> i guess we're using nodejs to run our build scripts
+01:22 < bhldev> yeah that's what I'm using too
+01:25 < bhldev> but not just build, more interested in making data driven games or projects
+01:32 < catid> it sounds like you are working on a lot of different types of projects
+01:54 < bhldev> even eval works
+01:54 < bhldev> an awful use case would be, load a script and eval it... would only do that as last resort but it's there if I need it
+08:51 < bhldev> heh catid not so much a niche after all
+08:51 < bhldev> people have embedded lua with java and other things
+09:04 < bhldev> still it's not exactly the same thing, it's not like dynamically eval java code at runtime
+09:04 < bhldev> the niche is still there someone just has to build a front layer for it
+17:28 < oodavid> Trying to install the testapp on android, but getting an undecipherable error
+17:29 < oodavid> Android NDK: WARNING: APP_PLATFORM android-14 is larger than android:minSdkVersion 8 in ./AndroidManifest.xml
+17:29 < oodavid> I would have thought android-14 being larger than the minSdkVersion would be a good thing...
+17:31 < oodavid> I install Android 2.2 (API 8) and see what happens, not built anything for Froyo in a long time
+18:30 < oodavid> Installed Android 4.0 (API 14) and Android 2.2 (API 8) and still getting the same issue
+18:30 < oodavid> http://pastebin.com/Fx6QPTz9 <  here's the output with the errors and warnings highlighted; it also has "make: execvp: ant: Permission denied" which I'm investigating now
+19:24 < oodavid> looking goooood
+19:33 < oodavid> had to install ant, fix my $JAVA_PATH and add the linux platform-tools to my $PATH for adb and now I'm up and running!
+20:47 < oodavid> Splendid!
+20:48 < oodavid> Just deployed a debug version onto my android phone, works pretty much as expected
+20:48 < oodavid> well, apart from the animation features that catid pulled into the latest build
+22:31 < catid> great
+22:31 < catid> i could do a release of the devkit today
+22:31 < catid> lemme just do some more regression testing and make sure nothing experimental is in there
+23:18 < bhldev> catid disappeared
+--- Day changed Wed Feb 05 2014
+01:22 -!- mazyod [~Adium@31.214.43.254] has left #gameclosure []
+01:28 < oodavid> Does "basil build native-android" apply zipalign or is that something I'd need to do manually?
+01:30 < catid> yeah it does that for you
+01:49 < catid> there's a new devkit version 0.1.45
+01:49 < catid> please let me know if that isn't working for you :)
+02:02 < oodavid> ding dong, I'll give that a go now
+02:02 < oodavid> While you're here; is there a View property that says "modifying the width and height will SCALE the view" ?
+02:03 < oodavid> or a rig that will do that...
+02:18 < oodavid> catid, did that release include the native-core pull request? Mine's reverted to a the original version...
+02:18 < oodavid> might have been an issue with basil update that I missed
