@@ -2362,3 +2362,217 @@
 02:03 < oodavid> or a rig that will do that...
 02:18 < oodavid> catid, did that release include the native-core pull request? Mine's reverted to a the original version...
 02:18 < oodavid> might have been an issue with basil update that I missed
+18:17 < catid> oodavid: hrm the release did include your pull request but i think we had to fix some things
+18:17 < catid> because you have your own version of it you may need to erase your repo to get the update feature to work
+19:07 < oodavid> Morning
+19:07 < catid> hiya
+19:07 < oodavid> I suspected as much, so I stashed my changes and tried to run basil update again
+19:08 < oodavid> which worked for timestep but not native-core
+19:08 < catid> hum
+19:08 < oodavid> I'll just grab the branch I'm on
+19:08 < catid> what's the error?
+19:08 < oodavid> HEAD detached at c4434ff
+19:09 < oodavid> there is no error
+19:09 < catid> huh
+19:09 < oodavid> before I jump the gun, I'll re-run update
+19:09 < oodavid> brb
+19:45 < oodavid> http://pastebin.com/diSNvWT0
+19:47 < oodavid> it all looks OK, but there's no reference to native-core so I'm assuming it's just not echoe'd for some reason
+19:57 < oodavid> the commit I'm on is the 9th Dec
+19:59 < oodavid> Gonna have a dig around and see where I can get the release branches; the addons directory isn't a submodule so I'm guessing it's a subtree or something else altogether :-)
+20:00 < oodavid> as an aside, I dig the new simulator interface
+20:06 < oodavid> aha, so devkit pulls core addons with the same tag - it would appear this is where the issue lies (for me)
+20:07 < oodavid> I'm guessing that since devkit is successfully on "release-0.1.45" that it's assuming addons are up-to-date
+20:07 < oodavid> I'll see if I can roll back and then update again
+20:11 < catid> the addons directory is curated by our scripts
+20:11 < catid> when you do basil install billing or whatnot
+20:11 < catid> deleting the addons might be a good idea
+20:12 < catid> our addons can't touch npm.  lots of stuff can be improved
+20:15 < oodavid> so if I just delete the entire addons/native-android directory yeah?
+20:16 < oodavid> yup
+20:16 < oodavid> that did it
+20:16 < oodavid> cheers catid :-)
+20:17 < oodavid> in return I will update your docs re: the animation library
+20:58 < catid> thanks
+22:19 < glaksmono> anyone is around?
+23:02 < glaksmono> anyone is around?
+23:02 < glaksmono> anyone is around?
+23:10 < oodavid> glak!
+23:11 < oodavid> I am for a little while
+23:11 < glaksmono> hi oodavid
+23:11 < glaksmono> can you help me with this.. platformer example? https://gist.github.com/glaksmono/15e59b778f687a45490e
+23:11 < glaksmono> for some reason.. animation doesn't work.. on the later case
+23:11 < glaksmono> not sure why would that be :-/
+23:11 < glaksmono> something to do with that.. if (this.player.getPrevBottom() <= hit.view.getTop() + 10 && this.player.velocity.y >= 0) {
+23:11 < glaksmono> what does that mean..
+23:32 < oodavid> not sure TBH, I've not read through the platformer code before
+23:34 < glaksmono> well.. what i wanted to do is basically..
+23:34 < glaksmono> on collision.. i wanted to start animationFrame
+23:34 < glaksmono> it doesn't seem to do the job
+23:34 < glaksmono> :-/
+23:34 < glaksmono> not sure what i'm missing
+23:34 < glaksmono> the first one works though
+23:34 < glaksmono> any thoughts on the code?
+23:55 < glaksmono> can anyone help me pleaseee? :(
+--- Day changed Thu Feb 06 2014
+00:28 < oodavid> ah sorry
+00:28 < oodavid> I don't know
+02:39 < glaksmono> anyon is around?
+02:39 < glaksmono> do you know how to bind the action button on TextDialogView ???
+02:39 < glaksmono> i can't find docs for that
+03:19 < bhldev> heh where's catid
+03:20 < bhldev> is it possible to use typescript or coffeescript or anything else with gc?
+03:20 < bhldev> I don't see why not
+03:27 < glaksmono> man, its so hard to setup dialog
+03:27 < glaksmono> my dialog is all messed up
+03:27 < bhldev> the textviewprompt?
+03:27 < glaksmono> yeah
+03:27 < glaksmono> and there's no docs
+03:28 < bhldev> 9 slice?
+03:28 < glaksmono> eh?
+03:28 < glaksmono> where did it specify that?
+03:28 < glaksmono> iu don't see that on the sample code
+03:30 < glaksmono> something with my background is messed up
+03:30 < glaksmono> ideas?
+03:30 < glaksmono> http://screencast.com/t/Okhu8tOzP
+03:30 < glaksmono> http://screencast.com/t/Okhu8tOzP
+03:36 < bhldev> textpromptview?
+03:36 < glaksmono> bhldev, TextDialogView
+03:36 < bhldev> inherits view and textview the options are the same
+03:37 < glaksmono> if i pass in width and height, it looks fine
+03:37 < glaksmono> but for some reason it doesn't respond to me "click"
+03:37 < glaksmono> on the button..
+03:37 < glaksmono> it never registered
+03:37 < glaksmono> when i look at from the UI debugger, the components still sticked at the "messed up location"
+03:37 < bhldev> there's no textdialogview
+03:37 < glaksmono> moreover there's no "action" parameter seems like?
+03:38 < glaksmono> bhldev, https://github.com/gameclosure/menus#textdialogview-class
+03:38 < bhldev> use textpromptview
+03:38 < glaksmono> ahhh
+03:44 < glaksmono> bhldev, how do i register event listener on that view?
+03:44 < glaksmono> on click
+03:47 < bhldev> inherts view use InputSelect
+03:47 < bhldev> http://docs.gameclosure.com/example/events-input-click/
+03:51 < glaksmono> bhldev, i tried this.. https://gist.github.com/glaksmono/04b8910a41f16a092c86
+03:51 < glaksmono> doesn't work
+03:51 < glaksmono> thoughts?
+03:55 < glaksmono> doesn't seem like there's an easy way to build dialog..
+03:55 < glaksmono> it hink i'm just going to build it as a view i'm assuming
+03:55 < glaksmono> kk
+03:56 < bhldev> wrong use of this
+03:57 < bhldev> gone, too bad so sad
+03:57 < bhldev> you guys better figure out a way to get people to idle here lol
+17:31 < glaksmono> anyone is here?
+--- Day changed Fri Feb 07 2014
+18:40 -!- mgustafsson is now known as mgustaf
+18:42 -!- mgustafsson is now known as mgustaf
+--- Day changed Sat Feb 08 2014
+00:34 < bhldev> hi catid
+00:35 < catid> hello
+13:50 < bhldev> catid if I wanted to allow users to script after compilation how would I do it?
+13:51 < bhldev> does basil compile to bytecode or use a webview to wrap?
+--- Day changed Sun Feb 09 2014
+02:33 < nicn> just seeing how active this room is
+02:36 < nicn> so, not very
+02:37 < nicn> last blog was aug 2013... probably not a good sign as well
+03:37 < bhldev_> you guys really need to fix that
+03:37 < bhldev_> people drop in see 10 people and leave
+03:37 < bhldev_> better to have a normal vbulletin or nodebb forum to build critical mass
+06:16 < bhldev_> maybe its better html5 game engine devs don't get into gc catid
+06:17 < bhldev_> if all gc was, was a canvas then there would be no niche and you would get defeated by the likes of Intel XDK and other multi billion dollar companies
+06:17 < bhldev_> just a canvas is pretty useless imo
+13:07 < gameninja> Hi i need one help on native plugin development
+13:08 < gameninja> i am new to game closure
+13:08 < gameninja> O:-)
+13:10 < gameninja> Can we bring any native feature to game closure environment? Like i want localstorage and also want to read contacts
+13:22 -!- gameninja1 [~aininja@223.196.177.137] has left #gameclosure []
+14:04 < bhldev_> man people don't stay long enough for me to answer
+14:04 < bhldev_> don't worry I get my Internet back on Tuesday
+--- Log closed Mon Feb 10 06:53:54 2014
+--- Log opened Mon Feb 10 06:54:08 2014
+06:54 -!- Irssi: #gameclosure: Total of 15 nicks [1 ops, 0 halfops, 0 voices, 14 normal]
+06:54 -!- Irssi: Join to #gameclosure was synced in 7 secs
+--- Log closed Mon Feb 10 07:56:39 2014
+--- Log opened Mon Feb 10 07:56:54 2014
+07:56 -!- Irssi: #gameclosure: Total of 15 nicks [1 ops, 0 halfops, 0 voices, 14 normal]
+07:56 -!- Irssi: Join to #gameclosure was synced in 8 secs
+--- Log closed Mon Feb 10 08:02:16 2014
+--- Log opened Mon Feb 10 08:03:25 2014
+08:03 -!- Irssi: #gameclosure: Total of 15 nicks [1 ops, 0 halfops, 0 voices, 14 normal]
+08:03 -!- Irssi: Join to #gameclosure was synced in 62 secs
+10:32 < Godefroy> hi there!
+--- Log closed Mon Feb 10 10:52:13 2014
+--- Log opened Mon Feb 10 11:08:49 2014
+11:08 -!- Irssi: #gameclosure: Total of 14 nicks [1 ops, 0 halfops, 0 voices, 13 normal]
+11:08 -!- Irssi: Join to #gameclosure was synced in 8 secs
+14:30 < oodavid> Godefroy, hello :-)
+14:30 < oodavid> How are you this fine day?
+16:14 < Godefroy> oodavid: fine, thx!
+16:14 < Godefroy> oodavid: still working hard on our game :-)
+16:14 < Godefroy> is there a member of GC staff here?
+16:15 -!- Godefroy [~Godefroy@2001:41d0:8:c693::1] has left #gameclosure ["Quitte"]
+16:15 < Godefroy> do you plan to release a roadmap and changelogs?
+16:15 < Godefroy> that would be really useful
+16:26 < oodavid> catid should pop on shortly when he starts work
+16:27 < oodavid> but I'd second a roadmap; I can imagine they're being reactive in their development
+21:55 < PierrickB> Yep, would be nice to see some follow up. Changelogs are not quite clear (last basil build created some problems with our game), the dev blog has not changed in 6 months, and there is no roadmap. 6 months ago there were new posts really frequently on the blog.
+--- Day changed Tue Feb 11 2014
+12:38 < Godefroy> catid: hey! what's up?
+12:38 < Godefroy> catid: do you plan to release a roadmap and changelogs? that would be really useful!
+16:49 < gameninja> hi
+16:50 < gameninja> need one help regarding native plugin development
+16:51 < gameninja> is anyone there?
+16:56 < gameninja> ?
+17:26 -!- gameninja1 [~aininja@106.79.129.73] has left #gameclosure []
+17:34 < glaksmono> anyone is around?
+17:34 < glaksmono> i'm wondering on how do people usually integrate GC with rails?
+17:34 < glaksmono> i found GC has an amazing performance compared to other engine, but the integration with rails is a bit of a hassle. thoughts?
+17:34 < glaksmono> catid, ?
+17:34 < glaksmono> u there?
+17:34 < glaksmono> ;)
+18:05 < Godefroy> glaksmono: rails as ruby on rails server-side I guess?
+18:05 < Godefroy> glaksmono: you should develop an API with rails and use it from GC with ajax => http://doc.gameclosure.com/api/utilities.html#module-util.ajax
+18:06 < glaksmono> got it, can you use rails assets pipeline tho? Godefroy ?
+18:07 < Godefroy> for CSS en JS files?
+18:07 < Godefroy> you can't use CSS with GC
+18:07 < glaksmono> no
+18:07 < glaksmono> for images
+18:08 < Godefroy> and you should not use external JS in your app
+18:08 < glaksmono> well we have other pages as well
+18:08 < glaksmono> that gest to the canvas
+18:08 < catid> Godefroy: probably not, we're all focused hard on getting some games out, so the devkit gets slowly improved while we do that
+18:08 < Godefroy> is it for static images or for UGC images? (user generated content)
+18:09 < catid> but there aren't plans specifically for the devkit
+18:09 < Godefroy> catid: yes I was pretty sure that your team is working on new games
+18:09 < Godefroy> catid: it's too bad that GC development is slower than before
+18:10 < Godefroy> catid: some improvements could really enhance GC
+18:10 < catid> yeah i wish i had more time to build more tools for it
+18:10 < Godefroy> catid: and GC could become more popular :-)
+18:10 < Godefroy> you don't plan to hire people to work on GC?
+18:11 < catid> we have hired a number of new people
+18:11 < Godefroy> \o/
+18:11 < catid> but we're very product-focused right now, as the tooling is about where it needs to be
+18:11 < Godefroy> you should also setup a feedback website, with Uservoice for example
+18:12 < Godefroy> it can help prioritise needs
+18:12 < Godefroy> the feedback website for the web service I manage (EklaBlog) is useful to us: http://feedback.eklablog.com/
+18:13 < catid> oh nice, hadn't heard of that before
+18:14 < Godefroy> I set it up in one day, with SSO (single sign on) and with ticket support
+18:15 < Godefroy> so you could set it up in one hours without SSO and without tickets
+18:15 < Godefroy> and it's cheap
+18:29 < catid> just suggested it to the founders, we'll see what they thing
+18:30 < catid> think*
+19:04 < PierrickB> catid: I thought devkit was actually GC main product. So the team is working on games to make money / make some advertisement for devkit ?
+20:17 < gameninja> hi
+21:39 < glaksmono> Godefroy, catid is there general design pattern on integration between GC and rails?
+21:39 < glaksmono> using rails asset pipeline?
+21:40 < glaksmono> or generally people just use GC's assets pipeline
+21:40 < catid> i've never used rails so..
+21:40 < catid> by asset pipeline do you mean the build process?
+21:40 < catid> or does that include the artist's work also?
+22:14 < Godefroy> glaksmono: I suggest you to use GC's design and to keep it simple on rails' side
+23:30 < bhldev> rails and gc?
+23:30 < bhldev> catid going hiding
+--- Day changed Wed Feb 12 2014
+01:41 < glaksmono> bhldev yeahhh
+01:41 < glaksmono> Godefroy, hmmm it's actually been super simple
+01:41 < glaksmono> the problem is the pipeline
