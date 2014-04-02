@@ -2576,3 +2576,707 @@
 01:41 < glaksmono> bhldev yeahhh
 01:41 < glaksmono> Godefroy, hmmm it's actually been super simple
 01:41 < glaksmono> the problem is the pipeline
+--- Log closed Thu Feb 13 02:42:42 2014
+--- Log opened Thu Feb 13 02:42:59 2014
+02:42 -!- Irssi: #gameclosure: Total of 14 nicks [1 ops, 0 halfops, 0 voices, 13 normal]
+02:43 -!- Irssi: Join to #gameclosure was synced in 6 secs
+22:28 < glaksmono> anyone is here?
+22:28 < glaksmono> :P
+22:28 < glaksmono> i'm wondering if gc supports retina?
+22:29 < glaksmono> seems like it does
+--- Day changed Fri Feb 14 2014
+00:07 < Godefroy> GC doesn't have to explicitly support retina, you just have to put images with good resolution :-)
+--- Log closed Fri Feb 14 06:41:26 2014
+--- Log opened Fri Feb 14 06:41:41 2014
+06:41 -!- Irssi: #gameclosure: Total of 15 nicks [1 ops, 0 halfops, 0 voices, 14 normal]
+06:41 -!- Irssi: Join to #gameclosure was synced in 7 secs
+13:54 < daimone> hi
+14:02 < PierrickB> hi
+14:23 < daimone> I'm new to GC
+14:23 < daimone> and I have a quite stupid question
+14:24 < daimone> maybe someone can help me
+14:25 < daimone> when is created GC.app ?
+14:27 < daimone> I mean: I have an isometric view instanciated in a js (not the Application.js), but I get the error "GC.app is undefined"
+14:37 < daimone> nevermind...
+15:15 -!- Luke is now known as Guest31011
+16:42 < daimone> does someone know a good source editor for js with, at least,  autocomplete
+16:42 < daimone> ?
+16:46 < jishnu7> daimone, sublime text
+16:50 < rampr> emacs :)
+16:53 < daimone> oh, thank you...I will give it a try!
+16:53 < jishnu7> vim :)
+16:54 < daimone> no no vim is the hell for me ;)
+16:55 < daimone> does sublime text need some plugin to works with GC sdk?
+16:58 < daimone> no, I think not
+16:58 < PierrickB> daimone: no, there is nothing specifically for GC and Sublime text
+16:59 < PierrickB> Install package manager for Sublime text and some neat plugins (JsFormat, color picker, docBlockr, etc). You can give TernJS (a smart autocomplete tool for js) a try, but I had some performances issues with SB3.
+17:00 < daimone> thank you all, I really hope GC team will develop some sort of plugin for Eclipse
+17:01 < daimone> (or something similar)
+17:04 < daimone> btw....are there some nice project being developed with GC?
+17:38 -!- Athos is now known as Guest962
+17:38 < Guest962> hey, i had a questeion, do you guys have an documentation about transitions?
+17:39 < Guest962> by that i mean transitions between one activity to another
+17:54 < daimone> can you explain a bit more?
+18:01 < Guest962> I have a transition between one activity that has settings and the main game. When I select game, the game's background flys in from the right and it's jerky. I was wondering if I could change that.
+18:02 < PierrickB> Guest962: Yep, I'm wondering too. Maybe Godefroy can answer
+18:03 < PierrickB> I know that for the moment we have the same transitions, but I guess there is a way to change that (GC being open source, that should not be difficult to do so)
+18:03 < PierrickB> daimone: We are actually developping a nice little thing with Godefroy and ronan3 , some kind a mobile MMO Tactical RPG, with some geolocalisation stuff in it. It's gonna kick ass !
+18:04 < Guest962> yeah my problem isn't jsut the transition, its that the transition looks bad (like it looks that text isn't beign erased and it's just drawing on top of it)
+18:04 < PierrickB> daimone: If you are more used to classical IDE like eclipse, you may want to give PHPStorm a try. It's an awesome "IDE" for PHP and javascript, it's really doing a good job. I'm used to SB shortcuts and functions (the magic bar and the multiple cursors), so I don't have the courage to switch, but that's clearly a nice choice.
+18:05 < daimone> thank you a lot PierrickB, I will give it a shot
+18:06 < PierrickB> It's because the other screen does not really disappear, but is put on a stack. But with "light" screens the animations are pretty nice for us. Some "heavy" screens creates some lags, the transition is not totally smooth
+18:06 < PierrickB> Guest962: Do you have a screenshot or a small video ? Do you mean the previous screen is still visible ?
+18:06 < daimone> your game sounds very interesting! we are also going to develop something quite small, this is our first experinece in gaming development
+18:07 < Guest962> hmm
+18:07 < Guest962> no i don't think its still visible
+18:07 < daimone> see you soon, job day is ended ;) bye bye!
+18:07 < Guest962> let me say it this way
+18:08 < PierrickB> ++
+18:08 < Guest962> transition to game screen is fine
+18:08 < Guest962> but the transition from game screen to win screen is jerky
+18:08 < Guest962> because theres text loaded in
+18:08 < Guest962> and it comes in from the right
+18:08 < Guest962> and it comes in a few times and overlaps
+18:10 < PierrickB> hm
+18:11 < PierrickB> I think we have the same behavior with screens having a white background
+18:11 < PierrickB> the white background is coming, then the left side is changing back to the previous bg before coming back to white
+18:11 < PierrickB> I don't see this problem with screens having a picture as a backgrtound
+18:12 < PierrickB> Maybe it's the way our screens are designed, I will need to dig in
+18:14 < Guest962> yeah
+18:14 < Guest962> unfortuantely im at work and i dont have the game in front of me
+19:10 < Godefroy> hmm
+19:10 < Godefroy> none of the demos (examples) seem to work
+19:10 < Godefroy> for example, click on "Launch Demo" in http://doc.gameclosure.com/example/text-fonts-ttf/
+19:26 < Guest962> yup in noticed that for a while
+19:39 -!- Luke is now known as Guest87116
+22:16 < JoshDC> hey guys this is my first time using IRC and my first time on this chat server. would this be a correct place to ask a quick gameclosure programming question? i'm working on something right now but i'm getting an error and trying to figure out why.
+22:18 -!- JoshDC [b1edbf81@gateway/web/cgi-irc/kiwiirc.com/ip.177.237.191.129] has left #gameclosure []
+22:28 -!- Luke is now known as Guest8050
+22:50 < PierrickB> JoshDC: Yes :)
+22:55 < JoshDC> okay good to know...thanks :)
+22:56 < JoshDC> i've been trying to get this running for the last hour or so
+22:56 < JoshDC> var effectsImage = new Image({url: 'resources/images/board/jewels.png'});
+22:56 < JoshDC> this.render = function (ctx) {
+22:56 < JoshDC>     ctx.drawImage(effectsImage, 560, 0, 106, 98, 0, 0, 106, 98);
+22:56 < JoshDC> };
+22:56 < JoshDC> sorry for the spaces
+22:56 < JoshDC> drawImage is giving a type error
+22:56 < JoshDC> i can't figure out why
+22:56 < JoshDC> the image is loaded correctly
+22:56 < JoshDC> render is sending the ctx correctly
+22:58 < JoshDC> but the console is showing a type error
+22:58 < JoshDC> is this the correct way to load the image for drawImage?
+22:58 < JoshDC> if anyone knows, it would be much appreciated
+23:03 < JoshDC> this is running correctly, so i know the ctx is coming through and everything else is correct, but not the drawImage:
+23:03 < JoshDC> ctx.strokeStyle = 'blue';
+23:04 < JoshDC>             ctx.rect(calcX, calcY, 106, 98);
+23:04 < JoshDC>             ctx.stroke();
+--- Day changed Sat Feb 15 2014
+04:47 -!- joshthecoder [joshthecod@gateway/shell/ircrelay.com/x-ggbhqodqljvzrrso] has left #gameclosure ["Linkinus - http://linkinus.com"]
+16:38 < bhldev> catid come back
+16:38 < bhldev> damn
+16:38 < bhldev> don't fire catid lol
+19:43 < Godefroy> bhldev: +1 :
+19:43 < Godefroy> !
+21:05 < jga255> hi
+21:05 < jga255> can somebody help me?
+--- Day changed Sun Feb 16 2014
+02:17 < daShader> hello
+11:40 < daimone> hi, is there an easy way to implement zomm in/out on a isometric view?
+12:35 < bhldev> daimone probably not checkout the isometric project
+12:36 < bhldev> rome one
+12:36 < bhldev> you want pinch to zoom?
+12:36 < bhldev> well according to Apple that is patented technology you must pay them one bazillion dollars to use it tyvm
+12:37 < daimone> eh?
+12:37 < daimone> what do you mean?
+12:38 < daimone> we can't implement a zoom in function without go against patented tec?
+12:47 < bhldev> no
+12:48 < bhldev> you are looking for cover vs contain
+12:48 < bhldev> I think it is nontrivial because the HUD and controls would never zoom while the center would zoom
+12:49 < daimone> exactly ;)
+12:50 < bhldev> http://docs.gameclosure.com/guide/designing-user-interfaces.html game with zoom would need special considerations and stretch to fit while maintaining aspect ratio on pinch
+12:57 < daimone> thank you bhldev, I kow it is quite hard so I hoped for a 'out-of-the-box' solution  to zoom only the iso view and nothing else, I will take a closer look later.
+13:47 < daimone> I have another question...
+13:48 < daimone> it seems that the 'updater' function defined in a 'editorSettings' for an isometric view, is not called when type ='item'
+13:49 < daimone> is it work as intended?
+14:53 < bhldev> daimone not sure check gc docs don't use random methods from source
+15:04 < daimone> ty again bhldev , gc docs doesn't say anything about it. it only describes updater as 'Optional, a function called after modifying the grid.'
+16:07 < gameninja> hi all, how r u?
+16:08 < gameninja> need one help
+16:14 < gameninja> is anyone online?
+16:23 -!- gameninja [~aininja@49.249.83.227] has left #gameclosure []
+17:38 -!- roosmaa [~mart@109.169.89.119] has left #gameclosure []
+17:40 -!- roosmaa [~mart@109.169.89.119] has left #gameclosure []
+--- Day changed Mon Feb 17 2014
+17:47 -!- glaksmono_ is now known as glaksmono
+17:47 < glaksmono> anyone is around?
+17:53 < PierrickB> glaksmono: I can try to answer ;p
+17:54 < glaksmono> i just made an update from master branch
+17:54 < glaksmono> and all of the "projects" are gone
+17:54 < glaksmono> thoughts?
+17:54 < glaksmono> i wanna try the demo
+17:58 < PierrickB> Weird.
+17:59 < PierrickB> For the examples you need to  basil install examples
+18:01 < glaksmono> any thoughts what's the issue with this?
+18:01 < glaksmono> https://gist.github.com/glaksmono/04b8910a41f16a092c86
+18:01 < glaksmono> i just did ./install.sh again
+18:01 < glaksmono> and did basil update
+18:05 < PierrickB> My opinion : make a clean install
+18:05 < glaksmono> how do you do that?
+18:06 < PierrickB> From my experience basil update fails almost all the time
+18:06 < glaksmono> how do you make a clean install?
+18:06 < PierrickB> I simply clone the while thing again
+18:06 < glaksmono> ah ok
+18:06 < glaksmono> and then did the ./install.sh again?
+18:06 < PierrickB> yes
+18:07 < glaksmono> ok
+18:07 < glaksmono> lemme do that
+18:18 < glaksmono> PierrickB, isn't there a way to compile the assets on gameclosure?
+18:18 < glaksmono> i remembered i did that a while back
+18:22 < glaksmono> any thoughts about this? https://gist.github.com/glaksmono/04b8910a41f16a092c86
+18:41 < PierrickB> Arf, I have no idea why you get this error
+18:41 < PierrickB> It seems path related
+18:41 < PierrickB> Are you on windows or mac ?
+18:42 < PierrickB> For the assets compiling, it's doing it by itself while compiling the game normally. I don't know how to manually do it
+18:43 < glaksmono> i'm on mac PierrickB
+18:46 < glaksmono> do you use the obj-c for gameclosure?
+18:46 < glaksmono> PierrickB,
+18:46 < glaksmono> i'm wondeirng if you've tried using their html5 v
+18:47 < PierrickB> Atm we are not using any obj-c for native stuff
+18:47 < PierrickB> Godefroy: coded some plugins for android, but we don't have the hardware to do the same for iOS yet
+18:50 < glaksmono> PierrickB, so you guys are using gameclosure on native apps right?
+18:50 < glaksmono> and btw this is the issue: https://github.com/gameclosure/devkit/issues/94
+18:58 < PierrickB> Ha ok, so it was a remote problem.
+18:58 < PierrickB> Yes, we are using GC to build an android+ios+browser game
+18:59 < PierrickB> To make a plugin you will have to code some native (java and obj-c), and then it will be easily usable with GC.
+19:19 < glaksmono> what backend do you use PierrickB ?
+19:27 < PierrickB> NodeJs :)
+19:30 < PierrickB> This way everything is in Js
+19:30 < PierrickB> Make it pretty nice to code, we can switch from one side to the other pretty easily (with small team that's nice to be able to change a developer's focus)
+19:38 < Godefroy> yep :)
+19:38 < Godefroy> anybody from GC here?
+19:38 < Godefroy> could somebody tell catid to come back please :3
+19:45 < glaksmono> haha i see
+19:45 < glaksmono> may be i should take a look on node js
+19:57 < Godefroy> glaksmono: yep! actually GC is based on Nodejs (but with syntax suger, a classes system and a great display engine), so it's worth learning it :-)
+20:00 < glaksmono> cool!
+21:51 < glaksmono> anyone is stuck becuz of this issue? https://github.com/gameclosure/devkit/issues/94
+21:51 < glaksmono> i'm stuck!
+21:51 < glaksmono> help!
+22:18 < PierrickB> glaksmono: I guess there is nothing you can do except waiting
+22:47 < Godefroy> glaksmono: does GC work on your computer or is it a total installation crash?
+23:05 < glaksmono> not even working at all
+23:05 < glaksmono> i can't use basil
+23:05 < glaksmono> :(
+23:19 < Godefroy> do you use windows? or linux or mac?
+23:26 < Godefroy> what errors do you have?
+23:27 < glaksmono> i'm on mac Godefroy
+23:27 < glaksmono> i pasted the error on that issue
+23:28 < glaksmono> https://github.com/gameclosure/devkit/issues/94
+23:28 < glaksmono> my last comment..
+23:28 < glaksmono> :(
+23:41 < glaksmono> thoughts Godefroy ?
+23:59 < PierrickB> Went to sleep
+23:59 < PierrickB> He told me that it looks like tealeaf is getting a time out
+23:59 < PierrickB> I think that's on GC side
+--- Day changed Tue Feb 18 2014
+00:17 < glaksmono> PierrickB, are they working on this now? cuz i can't use GC at all... :(
+00:18 < PierrickB> Seems that yes, from the link you gave me. One of their dev answered you and told you they were working on it.
+01:01 < glaksmono> anyone know if there's any update son this? https://github.com/gameclosure/devkit/issues/94
+01:01 < glaksmono> seems like it screws everyone up.. lol
+08:22 < bhldev> catid boo
+10:04 < Godefroy> catid: hey what's up?
+17:02 < rampr> http://www.weeby.co/ -> is this GC's new product ?
+17:09 < oodavid> rampr, was just reading all of that
+17:09 < oodavid> looks like it is, the labs link goes to GC github page
+17:11 < rampr> yeah
+17:16 < oodavid> could be interesting
+17:17 < oodavid> social integration  is a massive part of a lot of new games
+17:17 < oodavid> and the idea of rolling my own is not exactly daunting, but  annoying
+17:17 < oodavid> simple because I know it's been done a thousand times already
+17:38 < glaksmono> https://github.com/gameclosure/devkit/issues/94 <-- still open issue?
+17:38 < glaksmono> hi catid !
+17:50 < Greg11> hey guys, i'm building a game using GC. does anyone know why GC doesn't do any marketing? it's a little scary investing time in tech that only a few people are using (vs something like corona).
+17:55 < Greg11> my guess is they are waiting for the tech to get to a certain level first? (although it seems pretty sound)
+18:13 < PierrickB> That was fast
+18:13 < catid> good morning
+18:13 < catid> yeah yesterday we had a ton of stuff happening all day and i didn't have a chance to look at the dev.gameclosure.com server
+18:14 < catid> the guy who was working on it recently left and it seems to have been shut down somehow
+18:14 < catid> trying to get it started up now..
+18:14 < PierrickB> Hi catid
+18:14 < PierrickB> Good, glaksmono was getting crazy ;)
+18:15 < catid> part of it was that i didn't have access to our EC2 until late last night.. :)
+18:17 < glaksmono> cool!!!
+18:18 < glaksmono> PierrickB, i know right.. installing again now.. let's see if it's back
+18:18 < glaksmono> still getting a timeout for tealeaf thing
+18:19 < PierrickB> Don't think that it's fixed, catid said "trying to get it starter"
+18:19 < PierrickB> started*
+18:19 < glaksmono> aw snap
+18:19 < glaksmono> i'm like totally blocked.. :(
+18:20 < PierrickB> :/
+18:38 < glaksmono> btw sooo
+18:38 < glaksmono> we also write in javascript for iOS and Android devices?
+18:38 < glaksmono> i didn't know that, i thought u added a library
+18:38 < glaksmono> that's cool!
+18:46 < Godefroy> glaksmono: that's the point :-)
+18:47 < Godefroy> catid: hey have you seen the Flappy-bird-like that I developed last week with Game Closure? http://godefroy.me/un-flappy-bird-like-pour-la-saint-valentin-sur-browser-et-android-a106514868
+18:47 < catid> no i haven't, cool!
+18:47 < Godefroy> catid: I released it under GPL3 license, so you can use it as a demo if you want to :-)
+18:48 < catid> waiting for one of the founders to come in to get access to EC2 since i didn't get the invite somehow..
+18:48 < glaksmono> aw snappp.. thanks for the updates catid
+18:48 < catid> urk it runs too slow for me to play =(
+18:48 < catid> at least in the browser
+18:49 < catid> lemme try on native Godefroy
+18:49 < glaksmono> how do you send push notification from GC? i'm wondering.. hmm
+18:49 < Godefroy> catid: btw I think your startup should make an effort towards developpers with simple processes: easy access to bug tracker (on Github for example), feedback box, forum, and a little community management :-)
+18:49 < glaksmono> it has issue tracker from the devkit i think?
+18:50 < glaksmono> and i love this irc :D
+18:50 < catid> glaksmono: we have local notifications but not push notifications in the public devkit
+18:50 < glaksmono> what's the difference? catid
+18:50 < catid> push notifications can originate from the internet and start your app on someone's phone remotely
+18:50 < catid> local notifications are like timers that go off sometime in the future and re-engage users
+18:50 < Godefroy> catid: I know how to handle all of that, we do that everyday for EklaBlog (thousands of users, 11 millions unique visitors / month). If GC founders are interested, maybe I can offer a custom prestation :-)
+18:51 < Godefroy> to build a good community around GC, you need a good management and good tools :-)
+18:51 < catid> passing that along to them now..
+18:52 < Godefroy> GC devkit is great, that would be too bad if too few developers use it
+18:52 < Godefroy> catid: great :-)
+18:53 < catid> what's a good Email address i can give them to contact you?
+19:01 < glaksmono> catid, is there ETA on https://github.com/gameclosure/devkit/issues/94 ?
+19:03 < catid> hrm let's try to work around it for you
+19:03 < catid> you can download the JAR file here: http://androidtweak.in/downloads/tealeaf-build-tools-0.5.2.jar
+19:04 < catid> copy that file into devkit/lib
+19:04 < catid> and try installing again - you should be set
+19:04 < catid> (by running ./install.sh)
+19:06 < Godefroy> catid: contact@godefroy.me
+19:06 < catid> thanks
+19:08 < Godefroy> btw we experienced some issues with grayscale images, they were weirdly cropped by spriter (tealeaf I guess) in spritesheets
+19:10 < catid> with the latest spriter?
+19:11 < catid> is there any chance that i can get a copy of the images?  i'll pass them to the guy who rewrote it last month
+19:11 < catid> i think he would just need the folder containing the images that sprite poorly
+19:17 < Godefroy> yep, this two for example: http://ekladata.com/lOyZZ5ejS0GaQWllNN7ZXwHG3GI.png and http://ekladata.com/Cm00XFyPT-SQ3eZ7-DRiLGkQR9I.png
+19:31 < catid> so those by themselves
+19:31 < catid> i'll pass it along
+19:31 < catid> would it be possible to also see the output of the spriter too?
+19:31 < catid> so i can see what the issue is
+19:32 < catid> they're located under build/debug/native-android/spritesheets
+19:32 < catid> for example
+19:32 < catid> inside your game folder
+19:39 < glaksmono> hey catid, is there ETA on this? https://github.com/gameclosure/devkit/issues/94 (or is there a way to get around it?)
+20:01 < PierrickB> He gave you a method glaksmono ...
+20:01 < Godefroy> catid: I sent you an example by email
+20:01 < PierrickB> link to the tealeaf jar.
+20:05 < glaksmono> ah may be i was dropped out of the internet.. PierrickB
+20:05 < glaksmono> didn't see the message..
+20:05 < glaksmono> what's the method?
+20:08 < PierrickB> <catid> hrm let's try to work around it for you
+20:08 < PierrickB> <catid> you can download the JAR file here: http://androidtweak.in/downloads/tealeaf-build-tools-0.5.2.jar
+20:08 < PierrickB> <catid> copy that file into devkit/lib
+20:08 < PierrickB> <catid> and try installing again - you should be set
+20:08 < PierrickB> <catid> (by running ./install.sh)
+20:09 < glaksmono> ah!
+20:09 < glaksmono> thanks a lot PierrickB
+20:09 < glaksmono> gonna do that soon
+20:11 < glaksmono> catid, PierrickB does this look normal? https://gist.github.com/glaksmono/04b8910a41f16a092c86
+20:13 < glaksmono> ah it works tho
+20:32 < glaksmono> anyone know how to change the name on the simulator?
+20:32 < glaksmono> i changed the manifest.json name but for some reason it still registered on the old name..
+20:32 < glaksmono> thoughts ?
+20:50 < PierrickB> Yeah the errors are "normal"
+20:50 < PierrickB> No idea about the manifest stuff
+21:02 < catid> yes glaksmono that looks OK
+21:04 < catid> Godefroy: passed the spriting issue on to derek, he's looking at it
+21:16 < catid> yes glaksmono that looks OK
+21:16 < catid> my task this week is to do some refactoring in the native Android code in the devkit, so that the GL surface is divorced from the JavaScript states
+21:17 < catid> in our Weeby.co messenger integration product this is causing a problem where the JS code is being reinitialized when switching in/out of the game, which is either inefficient or causes leaks/crashes
+21:18 < catid> i believe in existing devkit games this is not an issue except perhaps on rare phones that destroy the GL context when homescreened
+21:18 < catid> should have it done Friday.  we're probably going to move the tealeaf-build-tools.jar file onto S3 for more reliable hosting soon
+21:19 < catid> but i also do not have access to the DNS records either so i can't fix it until the founders come in today
+21:22 < glaksmono> i'm wondering on how do i figure out which references the "projects" that's specified on the simulator?
+21:22 < glaksmono> it seems like it's runnning some code that i didn't expect..
+21:22 < glaksmono> catid, ?
+21:23 < glaksmono> catid, http://screencast.com/t/Jzz8xcKf <-- wherte is the code location..
+21:25 < catid> hm
+21:25 < catid> so you'll click on the project you want to simulate
+21:25 < catid> it is selected in the upper left
+21:25 < catid> hit the simulate button under it
+21:25 < glaksmono> yeah..
+21:25 < glaksmono> but i'm not sure where's the code that's running is from
+21:25 < catid> oh are you using Chrome?
+21:25 < glaksmono> yeah
+21:26 < glaksmono> basically i'm seeing that it's throwing error that it shouldn't to
+21:26 < glaksmono> i.e. it says that it has some import oouya..
+21:26 < glaksmono> i never done that in the code that i have
+21:26 < catid> interesting
+21:26 < catid> the only one that should have ouya is the Platformer
+21:27 < catid> which is the running bird icon
+21:27 < glaksmono> catid, is there a way to start a project outside of the devkit folder?
+21:29 < catid> yes
+21:29 < catid> for example if your game is under ~/dev/chris/myGame then just navigate to that folder in the console
+21:29 < catid> and type in `basil register`
+21:30 < catid> it will then show up in the web simulator list
+21:31 < glaksmono> ok i have a way around it
+21:31 < glaksmono> soo i deleted other project
+21:31 < catid> it uses the icon and shortName in the manifest.json file for your game in the list
+21:31 < glaksmono> and then for some reason it still stuck on the simulator
+21:31 < glaksmono> how do you remove it?
+21:31 < glaksmono> from the simulator?
+21:32 < catid> if it is gone from the disk you can type `basil clean-register` to delete missing games
+21:32 < glaksmono> hmm doesn't seem to do anything
+21:33 < catid> hrm well it is supposed to work :)
+21:33 < catid> lemme check if it's broken sec
+21:33 < catid> also try typing `basil` and using `basil help` to see what the commands do
+21:34 < catid> ok i just tried out `basil clean-register` and it worked: "Cleaned out 1 projects that were invalid from the register."
+21:52 < glaksmono> yeah i got it somehow now.. catid
+21:52 < glaksmono> and now i'm looking at this issue: http://screencast.com/t/5pEu7P5OUp4
+21:52 < glaksmono> any thoughts?
+21:58 < catid> https://s3.amazonaws.com/build-tools.gameclosure.com/tealeaf-build-tools-0.5.2.jar
+22:00 < glaksmono> ? catid
+22:11 < catid> ok we got the tealeaf build tools rehosted properly
+22:14 < glaksmono> ah nice
+22:14 < glaksmono> cool!
+22:14 < catid> if someone can please retest ./install.sh and make sure that is working that would be great
+22:15 < glaksmono> i'll do that
+22:15 < glaksmono> catid, btw is there issue on this example? http://doc.gameclosure.com/example/sound-effect/
+22:15 < glaksmono> for some reason it doesn't play the sound on my iphone
+22:16 < glaksmono> catid, i can just redo ./install right?
+22:18 < catid> maybe a little bit of an issue
+22:18 < catid> on android/ios it is important to preload sounds
+22:18 < catid> because otherwise they will play back delayed the first time
+22:18 < catid> also, MP3s take a very long time to load on some Android phones
+22:18 < catid> so it's a good idea to have MP3 and OGG versions of all your sounds
+22:19 < catid> just place the two files side-by-side in the sounds resources, like "bonk.mp3" and "bonk.ogg" and the build system will choose between them
+22:19 < glaksmono> interesting ok
+22:19 < catid> preloading is explained in the documentation..
+22:20 < catid> yea
+22:20 < catid> iPhone only supports OGG i think
+22:20 < catid> err only supports MP3
+22:20 < catid> there's more info here: http://doc.gameclosure.com/guide/audio-assets.html
+22:21 < catid> preloading is explained here: http://doc.gameclosure.com/guide/load-assets.html
+22:29 < glaksmono> hmm doesn't seem to be working.. even with preloading catid
+22:29 < glaksmono> thoughts?
+22:29 < glaksmono> btw i'm trying to load it on my iphone's browser..
+22:29 < glaksmono> by just using python SimpleHTTPServer
+22:29 < glaksmono> on the build release folder..
+22:29 < catid> so you're trying it on an iOS device?
+22:29 < catid> oh
+22:30 < catid> did you convert the OGG files to MP3?
+22:30 < glaksmono> yeah..
+22:30 < glaksmono> yeah
+22:31 < glaksmono> i have both OGG and mp3
+22:31 < glaksmono> it works on the simulator though
+22:31 < catid> ok lemme give it a shot
+22:31 < glaksmono> here's my code: https://gist.github.com/glaksmono/561c82623a65fb83716e
+22:35 < glaksmono> and why would it be looking for these files.. http://screencast.com/t/AQZVkA7njS haha
+22:37 < glaksmono> ah and i see validationFailedWithMessage:resultCode:]: unplayable URL (http://10.0.1.30:8000/resources/audio/sound1.ogg.mp3) (error=0 -- Movie could not be played.)
+22:38 < catid> ok this works when you do `basil debug native-ios --clean` to build it
+22:38 < catid> and the mp3 version is already available
+22:40 < glaksmono> wait, i'm using the browser version..
+22:40 < glaksmono> html5
+22:43 < catid> i'm not sure..  but most of what we do is for native builds not HTML5 games in browsers
+22:44 < catid> if you want to rapidly test on the device you can try the Test App
+22:45 < catid> there is documentation for the Test App in the native docs on the website
+23:01 < glaksmono> ugh..
+23:01 < glaksmono> sound is really not working at all on browser
+23:09 < catid> that may be true
+23:10 < glaksmono> snap!
+23:10 < glaksmono> actually.. interestingly sfx are working on android phones..
+23:10 < glaksmono> but not on iphone..
+--- Day changed Wed Feb 19 2014
+00:20 < glaksmono> catid, is there a roadmap on sound related issues for html5?
+00:21 < catid> i don't believe that's going to get fixed, but let me check with someone
+00:25 < catid> yeah that's very low priority for us.  the Kik messenger runs an iOS-based browser so i might look into it but not sure when i can get to it
+00:25 < catid> i imagine something in the JavaScript code needs to change when running on Safari to get that to work
+00:26 < catid> it would be somewhere in the devkit/lib/timestep/src HTML5 audio code if you have time to look at it
+01:04 < glaksmono> hey catid, do gameclosure lazy load the javascript files?
+01:05 < glaksmono> on the release build at least..?
+01:08 < catid> on `basil build native-android` for example it will package all the JS files into one large JS file
+01:08 < catid> and then on the device it will load them all at once
+01:09 < catid> the code for each game JS file won't execute until it's referenced by other code though
+01:09 < catid> when it's running remotely through the Test App,
+01:09 < catid> i believe the same thing happens and it's delivered as one large JS file
+01:10 < catid> this is probably also true for browser builds
+01:10 < glaksmono> well, it won't execute doesn't mean it's not loaded right?
+01:10 < glaksmono> basically i have lib/foo.js
+01:10 < catid> for instance if the game JS code changes it rebuilds the package and reloads it on the device
+01:10 < glaksmono> that needs to be loaded before window.load
+01:10 < catid> (in the Test App)
+01:11 < catid> if you import it, then it will be loaded first i believe
+01:12 < catid> like "import src.view.TOSView as TOSView;" will load the Terms of Service view code in one of our games before continuing with the current file
+01:14 < glaksmono> i guess the question is... since GC is using "imports" (https://github.com/gameclosure/js.io).. whether that is lazy loading the javascript files?
+01:14 < glaksmono> what is the difference between using "imports" and including the javascript files
+01:14 < catid> in the example above, the TOSView.js code at the top level will execute immediately
+01:15 < catid> ie. to set its exports for the user
+01:15 < catid> if the same file is imported by two files, then it will only execute the first time
+01:15 < catid> so this is a sort of lazy loading
+01:16 < glaksmono> so if i wanna make sure that i load a library file
+01:16 < glaksmono> before widow.onload
+01:17 < glaksmono> i just put that as the first import statement on Application.js?
+01:17 < catid> yeah
+01:17 < glaksmono> ok let me try that
+01:17 < catid> and it will run before window.onload is set to anything
+01:27 < glaksmono> catid, is there docs on this somewhere?
+01:54 < glaksmono> catid, is there docs on this somewhere?
+01:56 < catid> sorry just disconnected, docs on what?
+01:56 < glaksmono> on how the "import" works.. catid
+01:57 < glaksmono> of what you just explained..
+01:57 < glaksmono> so that i can share that with the team
+01:57 < glaksmono> :)
+01:57 < catid> hrm lemme check
+01:58 < catid> yes: http://docs.gameclosure.com/api/utilities.html#import
+01:58 < glaksmono> ahhh, but there's no details like how it's being loaded
+01:58 < glaksmono> how it's loading the files..
+01:58 < glaksmono> referenced..
+11:13 -!- mazyod [~Adium@94.201.237.175] has left #gameclosure []
+15:24 < oodavid> Hello all!
+15:25 < oodavid> Happy to log on and see some activity yesterday
+15:25 < oodavid> Is it all good on the cold front?
+15:26 < Godefroy> oodavid: hi :-)
+15:27 < oodavid> Godefroy, how are you?
+15:29 < oodavid> Just been looking at your flappybird codebase
+15:31 < Godefroy> oodavid: fine and you?
+15:31 < Godefroy> oodavid: cool :-)
+15:33 < oodavid> yeah awesome
+15:33 < oodavid> I setup a devlog on the tigsource forums for my GC game
+15:34 < oodavid> (if anyone is interested)
+15:34 < Godefroy> give us the link
+15:39 < oodavid> http://forums.tigsource.com/index.php?topic=38408
+15:53 < Godefroy> great!
+15:58 < oodavid> It might be good for GC to have something like this
+15:59 < oodavid> that is, a devlog area
+15:59 < oodavid> I've seen a few familiar faces on the GC IRC / google groups, but not sure what everyone is doing
+16:13 < Godefroy> yep, I talked catid about that yesterday
+16:14 < Godefroy> he transferred my suggestions to GC founders, so I guess we'll go further on that :-)
+16:25 < oodavid> Excellent!
+16:46 < jishnu7> Godefroy, can you share the source url of your game ?
+17:05 < Godefroy> jishnu7: my last mini-game is here: https://github.com/Godefroy/flappy-jolie-geekette
+17:06 < Godefroy> jishnu7: but we don't open sourced our main game we are working on
+17:07 < jishnu7> Godefroy, I actually started coding a flappy bird clone, last Sunday. Didn't get time to complete.
+17:32 < oodavid> might be online later...
+17:32 < oodavid> toooodles
+18:08 < catid> good morning
+--- Day changed Fri Feb 21 2014
+14:19 < daimone> hi
+14:19 < daimone> I'm trying the test app on a nexus 7
+14:19 < daimone> and I'm experinecing a lot of strange problem
+14:20 < daimone> orientation never change
+14:20 < daimone> a good amount of demo application doesn't works
+14:20 < daimone> and all app are not show in fullscreen but only in a portion of it
+14:20 < daimone> does someone else has those problems?
+15:00 < Godefroy> daimone: nope, no problem for me
+15:00 < Godefroy> daimone: maybe a bug in the very last version of GC devkit
+15:00 < daimone> what is your version of sdk?
+15:00 < daimone> I mean GC
+15:01 < daimone> mine is 0.1.45
+15:12 < daimone> ok it seems that the only way to update the code in the tablet is to reinstall the testapp each time
+15:13 < daimone> but orientation doesn't work. I have defined "supportedOrientations": ["portrait","landscape"], in manifest.json but nothing happens when i change screen orientation
+16:12 < Godefroy> daimone: I prefer to keep a single orientation for each game so that graphics are easier to set. Actually, I don't know any game that works with 2 different orientations
+20:23 < Athos> hello
+20:23 -!- Athos is now known as Guest75342
+20:23 < Guest75342> I have a question about textboxes in game closure and text wrapping
+20:24 < Guest75342> it seems if you have text and use \n to create a new line, the text will wrap regardless of where that new text will show up
+20:24 < Guest75342> is there a way to get around this?
+21:34 < Guest75342> hello?
+22:54 < catid> hello
+--- Log closed Sat Feb 22 14:57:10 2014
+--- Log opened Sat Feb 22 15:08:50 2014
+15:08 -!- Irssi: #gameclosure: Total of 12 nicks [1 ops, 0 halfops, 0 voices, 11 normal]
+15:08 -!- Irssi: Join to #gameclosure was synced in 8 secs
+--- Log closed Sat Feb 22 15:57:59 2014
+--- Log opened Sat Feb 22 16:04:16 2014
+16:04 -!- ServerMode/#gameclosure [+ns] by barjavel.freenode.net
+16:04 -!- Irssi: #gameclosure: Total of 1 nicks [1 ops, 0 halfops, 0 voices, 0 normal]
+16:04 -!- Irssi: Join to #gameclosure was synced in 8 secs
+--- Log closed Sat Feb 22 16:08:53 2014
+--- Log opened Sat Feb 22 17:14:33 2014
+17:14 -!- Irssi: #gameclosure: Total of 2 nicks [1 ops, 0 halfops, 0 voices, 1 normal]
+17:14 -!- Irssi: Join to #gameclosure was synced in 117 secs
+--- Log closed Sat Feb 22 17:23:38 2014
+--- Log opened Sat Feb 22 17:48:39 2014
+17:48 -!- Irssi: #gameclosure: Total of 11 nicks [1 ops, 0 halfops, 0 voices, 10 normal]
+17:48 !dickson.freenode.net [freenode-info] please register your nickname...don't forget to auto-identify! http://freenode.net/faq.shtml#nicksetup
+17:48 -!- Irssi: Join to #gameclosure was synced in 16 secs
+18:26 < Athos> hey
+18:26 < Athos> can anybody help me with a text wrappign problem?
+18:26 -!- Athos is now known as Guest57701
+--- Day changed Sun Feb 23 2014
+00:06 < bhldev> hey catid_
+--- Log closed Sun Feb 23 11:37:00 2014
+--- Log opened Sun Feb 23 11:37:19 2014
+11:37 -!- Irssi: #gameclosure: Total of 12 nicks [1 ops, 0 halfops, 0 voices, 11 normal]
+11:37 -!- Irssi: Join to #gameclosure was synced in 8 secs
+--- Log closed Sun Feb 23 11:47:23 2014
+--- Log opened Sun Feb 23 11:47:59 2014
+11:47 -!- Irssi: #gameclosure: Total of 9 nicks [1 ops, 0 halfops, 0 voices, 8 normal]
+11:48 -!- Irssi: Join to #gameclosure was synced in 8 secs
+12:56 < ben0> hi, anyone heer?
+--- Log closed Sun Feb 23 19:47:46 2014
+--- Log opened Sun Feb 23 19:48:23 2014
+19:48 -!- Irssi: #gameclosure: Total of 13 nicks [1 ops, 0 halfops, 0 voices, 12 normal]
+19:48 -!- Irssi: Join to #gameclosure was synced in 7 secs
+--- Log closed Sun Feb 23 22:16:43 2014
+--- Log opened Sun Feb 23 22:17:07 2014
+22:17 -!- Irssi: #gameclosure: Total of 10 nicks [1 ops, 0 halfops, 0 voices, 9 normal]
+22:17 -!- Irssi: Join to #gameclosure was synced in 7 secs
+--- Day changed Mon Feb 24 2014
+02:28 -!- catid_ is now known as catid
+--- Log closed Mon Feb 24 07:58:25 2014
+--- Log opened Mon Feb 24 07:58:40 2014
+07:58 -!- Irssi: #gameclosure: Total of 15 nicks [1 ops, 0 halfops, 0 voices, 14 normal]
+07:58 -!- Irssi: Join to #gameclosure was synced in 7 secs
+--- Log closed Mon Feb 24 08:06:41 2014
+--- Log opened Mon Feb 24 08:06:57 2014
+08:06 -!- Irssi: #gameclosure: Total of 11 nicks [1 ops, 0 halfops, 0 voices, 10 normal]
+08:06 -!- Irssi: Join to #gameclosure was synced in 7 secs
+13:31 < daimone> hi
+13:31 < daimone> is there someone of GC team?
+14:32 -!- Euan_ is now known as Euan
+23:57 < oodavid> Just installed Bubble Story, I'm duplicating a lot of weeby.co functionality
+23:58 < oodavid> Oh well, might have to jump ship at some point in the future :-)
+--- Day changed Tue Feb 25 2014
+17:22 < milkyj> hey guys, new to gameclosure - went through the example tutorials and successfully compiled "hello world" to IPA and got the tingles. n00b question : Can I use node modules (commonJS)? If so, any reference examples?
+18:13 < milkyj> basil n00b question - is there a way to use nodejs modules in gc client?
+18:22 < oodavid> milkyj, hello
+18:22 < oodavid> not tried node modules before, but if it's pure javascript then yeah
+18:22 < oodavid> although I think you'd lose out in the native benefits that the GC objects come with
+18:22 < oodavid> I'm a fellow developer like you, so don't take my word as gospel
+18:23 < oodavid> out of curiosity, which module(s) are you interested in using?
+18:29 < milkyj> I am interested in oboejs : http://oboejs.com/ right now but it would be great to leverage all npm! I was looking at js.io but don't understand it.
+18:31 < oodavid> Have you looked at http://doc.gameclosure.com/example/sockets-basic/
+18:31 < oodavid> catid, is there a way to ignore source files during compilation? (akin to .gitignore)
+18:33 < milkyj> oodavid, I did but I would like to use http. I created a socket based multi-player game and we had to fall back on old-school polling because different mobile carriers block ports and sockets. It was a nightmare, glad we used socket.io
+23:02 -!- catid_ is now known as catid
+--- Log closed Wed Feb 26 06:37:39 2014
+--- Log opened Wed Feb 26 06:38:15 2014
+06:38 -!- Irssi: #gameclosure: Total of 13 nicks [1 ops, 0 halfops, 0 voices, 12 normal]
+06:38 -!- Irssi: Join to #gameclosure was synced in 8 secs
+--- Log closed Thu Feb 27 03:03:14 2014
+--- Log opened Thu Feb 27 03:03:32 2014
+03:03 -!- Irssi: #gameclosure: Total of 11 nicks [1 ops, 0 halfops, 0 voices, 10 normal]
+03:03 -!- Irssi: Join to #gameclosure was synced in 8 secs
+--- Log closed Sat Mar 01 09:54:24 2014
+--- Log opened Sat Mar 01 10:12:02 2014
+10:12 -!- Irssi: #gameclosure: Total of 16 nicks [1 ops, 0 halfops, 0 voices, 15 normal]
+10:12 -!- Irssi: Join to #gameclosure was synced in 20 secs
+--- Log closed Sat Mar 01 23:03:25 2014
+--- Log opened Sat Mar 01 23:09:20 2014
+23:09 -!- Irssi: #gameclosure: Total of 15 nicks [1 ops, 0 halfops, 0 voices, 14 normal]
+23:09 -!- Irssi: Join to #gameclosure was synced in 7 secs
+--- Day changed Sun Mar 02 2014
+02:18 < KDAS_> hi, any sample with local storage?
+19:43 < bhldev_> yo catid long time no talk
+19:43 < bhldev_> so I'm in libgdx and java now, sry lol
+19:43 < bhldev_> never thought I would go back to java
+20:56 < oodavid> Whoa there rampr, is your machine working OK? I have a log of like 100 join and quite messages :P
+20:58 < rampr> oodavid: sorry must be my internet connection
+20:58 < rampr> happens sometimes
+20:58 < oodavid> heh, things good?
+21:35 < rampr> oh yeah
+21:37 < rampr> It's quiet in here
+--- Day changed Mon Mar 03 2014
+17:42 -!- boneskul_ is now known as boneskull
+19:39 < catid> good morning all
+19:39 < catid> looking this morning at potential JS memory leaks on iOS
+20:16 < Godefroy> catid: hey good morning!
+21:01 < catid> 'lo Godefroy
+--- Day changed Tue Mar 04 2014
+07:31 -!- jishnu7 is now known as jishnu7_
+07:31 -!- jishnu7_ is now known as jishnu7
+--- Log closed Tue Mar 04 21:21:22 2014
+--- Log opened Tue Mar 04 21:55:31 2014
+21:55 -!- Irssi: #gameclosure: Total of 13 nicks [1 ops, 0 halfops, 0 voices, 12 normal]
+21:55 -!- Irssi: Join to #gameclosure was synced in 6 secs
+--- Day changed Wed Mar 05 2014
+09:02 -!- jishnu7 is now known as Guest58451
+--- Log closed Wed Mar 05 11:52:55 2014
+--- Log opened Wed Mar 05 11:53:10 2014
+11:53 -!- Irssi: #gameclosure: Total of 18 nicks [1 ops, 0 halfops, 0 voices, 17 normal]
+11:53 -!- Irssi: Join to #gameclosure was synced in 7 secs
+--- Log closed Wed Mar 05 14:09:18 2014
+--- Log opened Wed Mar 05 15:28:52 2014
+15:28 -!- Irssi: #gameclosure: Total of 15 nicks [1 ops, 0 halfops, 0 voices, 14 normal]
+15:28 -!- Irssi: Join to #gameclosure was synced in 6 secs
+--- Log opened Mon Mar 31 12:51:13 2014
+12:51 -!- Irssi: #gameclosure: Total of 13 nicks [1 ops, 0 halfops, 0 voices, 12 normal]
+12:51 -!- Irssi: Join to #gameclosure was synced in 1 secs
+--- Log closed Tue Apr 01 10:01:51 2014
+--- Log opened Tue Apr 01 10:02:27 2014
+10:02 -!- Irssi: #gameclosure: Total of 14 nicks [1 ops, 0 halfops, 0 voices, 13 normal]
+10:02 -!- Irssi: Join to #gameclosure was synced in 7 secs
+17:40 < oodavid> evening / morning!
+18:48 < PierrickBigNet> yop !
+18:48 < PierrickBigNet> Long time no see, catid , is everything ok at gameclosure ?
+18:50 < catid> good morning
+18:51 < catid> it's going okay
+18:51 < catid> yesterday i released updated versions of the amplitude and flurry plugins
+18:52 < catid> we've taken on a new company name Weeby.co to market our services in the mobile IM gaming space
+18:53 < catid> there are some native fixes upstream in the remote image load/cache system
+18:53 < PierrickBigNet> Nice, new stuff !
+18:54 < catid> we're almost done working with the QA guys at Kik and Tango messengers
+18:54 < catid> should have our first app up soon
+18:54 < catid> for each of those
+18:55 < PierrickBigNet> I need to check this weeby thing. Some king of gaming social network connected to IM apps ?
+18:55 < PierrickBigNet> I know I already said that, but GC would definitely benefit if all this stuff was posted on the dev blog ! :D
+18:59 < catid> the idea seems to be to build games directly for IM services
+19:00 < PierrickBigNet> Ho
+19:00 < catid> hopefully one of those titles will get big
+19:00 < PierrickBigNet> I did not even know that this existed.
+19:00 < catid> it's a new market for games
+19:00 < PierrickBigNet> The idea make sense, but aren't games limited by the app ?
+19:01 < catid> sometimes - for example Kik requires that the games run in the mobile browser
+19:01 < PierrickBigNet> I mean, is kik just giving a link to the google play store ?
+19:01 < PierrickBigNet> Ha, alright
+19:01 < catid> however, Tango integration is more like Facebook integration
+19:01 < PierrickBigNet> So it's completely separated from the stores
+19:01 < catid> and the app runs separately
+19:01 < catid> yea
+19:02 < PierrickBigNet> I'm surprised. Tango can do this kind of thing on IOS ?
+19:02 < catid> in the Tango case we're on the actual app/play store
+19:03 < catid> but they essentially promote our game and link to it from the Tango IM app
+19:03 < catid> and our app is branded for Tango
+19:04 < PierrickBigNet> Ok.
+19:14 < Godefroy> interesting
+22:22 < peoro> Hello
+22:24 < peoro> I have a working HTML5 game (it doesn't use the DOM, just HTML5 Canvas and Audio). I'd like to have it working on Game Closure in order to build it for mobiles.
+22:26 < peoro> I could not find many details on how to port an existing game to Game Closure: most of the documentation focuses on the UI and on Game Closure libraries...
+22:26 < peoro> Would you know where to find something on how to port an existing HTML5 Canvas game to Game Closure?
+23:39 < catid_> most of the GC devkit API works the same way as HTML5 canvas
+23:39 -!- catid_ is now known as catid
+23:40 < catid> however, some features are missing
+23:40 < catid> also the imports are different
+--- Day changed Wed Apr 02 2014
+00:26 < peoro> yeah, I fixed the issues with the import: concatenated all of my javascript files in a single one, added the `exports` object and fixed a few things (like the fact that the global `this` object is different from `window`)
+00:27 < peoro> it looks like there are still too many road blocks though: the canvas context should be passed around everytime I render (and this is an issue for my application logic), and I guess I'd have to rewrite most of the event support (mouse/touch input, timers etc)
+00:28 < peoro> GC looks like a pretty neat framework, but it differs too much from standard HTML5 to be used for existing projects... or this is at least the impression I got
+00:28 < catid> ideally you shouldn't have to pass around a context object unless you are doing offscreen rendering
+00:29 < catid> our game sprite objects are ImageViews i believe
+00:29 < catid> and the context-stuff is handled internally
+00:33 < peoro> uh, ok then, I was misleaded then... Since GC.Application.render is taking a context as parameter, I thought I could use it only during the current frame (thought it was somehow related to some internal GL stuff).
+00:33 < peoro> I'll keep digging then: that was my biggest issue :)
+00:35 < catid> offscreen canvas is used for special operations like linear adds between subsets of objects in a scene
+00:35 < catid> or drawing games
+00:35 < catid> you should take a look at the Platformer game for example
+01:42 < peoro> wow, just wow! you were right, catid: my application is up and running!
+01:42 < peoro> thanks for your help :)
+01:43 < peoro> I'll just need to fix the input, the rest (including timers) seem just fine! :D
+01:43 < catid> oh nice
+02:00 < jishnu7> catid, are you guys still going to update gameclosure ?
+02:01 < catid> yeah i'm going to do another release of the devkit for any fixes we come up with
+02:01 < jishnu7> catid, here is one from me. https://github.com/gameclosure/timestep/pull/27
+02:02 < catid> oh thanks!
+02:02 < catid> there is another pull request i need to look at also
+02:02 < catid> will put this on my TODO list as well
+02:04 < jishnu7> catid, Is there any way to implement rounded corners for a view without using an image ?
+02:04 < catid> we use a 9sliced image for our rounded dialogs and buttons
+02:04 < catid> i think there are examples of that in the menu library
+02:05 < jishnu7> without an image ?
+02:05 < catid> no, we use an image for those
+02:05 < catid> curves aren't supported by the render code
+02:05 < catid> so it would be tricky to emulate with short line segments
+02:05 < jishnu7> I tried with the canvas context which is getting at this.render()
+02:06 < jishnu7> but view is already rendered and whatever I'm rendering is coming on top of that.
+02:07 < jishnu7> if I do clear, transparency will be lost.
+02:08 < jishnu7> but I hacked together a way. first I drew a rectangle with same size as view, then a path with quadraticCurveTo and lineTo'
+02:08 < jishnu7> this is working on browser
+02:08 < jishnu7> but not on device
+02:11 < jishnu7> catid, my question is, is it possible to clear the view keeping views in the intact.
+02:12 < jishnu7> is it possible to clear a view keeping views in the background intact
